@@ -1,7 +1,10 @@
+import { FirstSection } from "../views/developers/FirstSection"
 
 const Developers = () => {
   return (
-    <div>Developers</div>
+    <>
+      <FirstSection/>
+    </>
   )
 }
 

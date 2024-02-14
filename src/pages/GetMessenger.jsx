@@ -1,8 +1,11 @@
 import React from 'react'
+import { FirstSection } from '../views/getMessenger/FirstSection'
 
 const GetMessenger = () => {
   return (
-    <div>GetMessenger</div>
+    <>
+      <FirstSection/>
+    </>
   )
 }
 
