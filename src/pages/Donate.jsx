@@ -1,7 +1,10 @@
+import FirstSection from "../views/Donate"
 
 const Donate = () => {
   return (
-    <div>Donate</div>
+    <>
+    <FirstSection />
+    </>
   )
 }
 
