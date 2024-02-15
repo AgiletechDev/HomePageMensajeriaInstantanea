@@ -39,7 +39,6 @@ const Navbar = () => {
   const handleLanguage = () => {
     const newLanguage = !englishLanguage ? "en" : "es";
 
-    // Utiliza la función de cambio de idioma del estado global
     changeLanguage(newLanguage);
 
     setEnglishLanguage(!englishLanguage);
