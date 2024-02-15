@@ -1,5 +1,6 @@
 import { Box, Button, Typography } from "@mui/material"
 import phone from '../../assets/images/phone.png'
+import Smessengerasset2 from '../../assets/images/Smessengerasset2.png'
 
 export const FirstSection = () => {
   return (
@@ -9,7 +10,7 @@ export const FirstSection = () => {
             display: 'flex',
             justifyContent: 'space-around',
             alignItems: 'center',
-            height: '100vh',
+            height: '90vh',
             width: '100%',
             marginTop: '40px'
         }}
@@ -55,7 +56,7 @@ export const FirstSection = () => {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            height: '900px',
+            height: '800px',
             width: '100%',
             borderTopLeftRadius: '50px',
             marginTop: '-50px'
@@ -106,7 +107,7 @@ export const FirstSection = () => {
                         </Typography>
                             
                     </Box>
-                        <img src="" alt="" />
+                        <img src={Smessengerasset2} alt="" style={{height: '450px', marginLeft: '20px'}} />
 
                 </Box>
 

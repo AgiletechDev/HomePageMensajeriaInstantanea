@@ -1,7 +1,9 @@
 import { Box, Button, Typography } from "@mui/material"
 import ciudad from '../../assets/images/ciudadWhiteAndBlack.jpg'
+import Smessengerasset9 from '../../assets/images/Smessengerasset9.png'
+import Smessengerasset4 from '../../assets/images/Smessengerasset4.png'
 
-const SectionCard = ({title, image,children})=>(
+const SectionCard = ({title, image,children, imageHeight, imageMarginBottom})=>(
     <Box sx={{
         display: 'flex',
         flexDirection: 'column',
@@ -21,9 +23,10 @@ const SectionCard = ({title, image,children})=>(
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'flex-end',
+            overflow: 'hidden'
         }}
         >
-            <img src={image} alt="" style={{ position: "absolute", bottom: "0" }} />
+            <img src={image} alt="" style={{ position: "absolute", bottom: imageMarginBottom, height: imageHeight }} />
         </Box>
 
         {children}
@@ -44,7 +47,9 @@ export const FirstSection = () => {
 
             <SectionCard
                 title='Smessenger para dispositivos móviles'
-                image={ciudad}
+                image={Smessengerasset4}
+                imageHeight='390px'
+                imageMarginBottom='-180px'
             >
                 <Box sx={{
                     display: 'flex',
@@ -83,7 +88,13 @@ export const FirstSection = () => {
             </SectionCard>
 
 
-            <SectionCard title='Smessenger para Escritorio' image={ciudad}>
+            <SectionCard title='Smessenger para Escritorio' 
+            image={Smessengerasset9}  
+            imageHeight='315px'
+            imageMarginBottom='-70px'
+
+            
+            >
                 <Button variant="contained" color="textDark" 
                 sx={{
                     width: '100%',

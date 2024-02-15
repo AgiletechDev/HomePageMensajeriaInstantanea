@@ -1,27 +1,41 @@
 import { Box, Button, Card, CardContent, CardMedia, Typography } from "@mui/material"
-import ciudad from '../../assets/images/ciudadWhiteAndBlack.jpg'
+import Smessenger from '../../assets/images/Smessenger_asset6.png'
 import guacamayo from '../../assets/images/guacamayo.jpg'
+import icons8_mms1 from '../../assets/icons/icons8_mms1.png'
+import icons8_security_shield1 from '../../assets/icons/icons8_security_shield1.png'
+import icons8_shared_mail1 from '../../assets/icons/icons8_shared_mail1.png'
+import icons8_phone_message1 from '../../assets/icons/icons8_phone_message1.png'
+import Smessengerasset1 from '../../assets/images/Smessengerasset1.png'
+import Smessengerasset5 from '../../assets/images/Smessengerasset5.png'
 
 const cardStyles = {
-    backgroundColor: 'rgba(255, 255, 255, 0.5)', 
-    backdropFilter: 'blur(10px)',
-    borderRadius: '40px 40px 0 40px',
-    width: '450px' 
-  };
-
-const cardStyles2 = {
-    backgroundColor: 'rgba(255, 255, 255, 0.5)', 
+    backgroundColor: 'rgba(255, 255, 255, 0.1)', 
     backdropFilter: 'blur(10px)',
     borderRadius: '40px 40px 0 40px',
     width: '450px',
-    marginLeft: '20px' 
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center' 
+  };
+
+const cardStyles2 = {
+    backgroundColor: 'rgba(255, 255, 255, 0.1)', 
+    backdropFilter: 'blur(10px)',
+    borderRadius: '40px 40px 0 40px',
+    width: '450px',
+    marginLeft: '20px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center' 
   };
 
 export const SecondSection = () => {
   return (
     <>
         <Box sx={{
-            background: `url(${ciudad})`,
+            background: `url(${Smessenger})`,
             backgroundSize: 'cover',
             height: '900px',
             width: '100%',
@@ -39,17 +53,13 @@ export const SecondSection = () => {
             }}>
                 <Card sx={cardStyles}
                 >
-                    <CardMedia
-                        component="img"
-                        height="140"
-                        image="url_de_tu_imagen.jpg" // Reemplaza con la URL de tu imagen
-                        alt="Imagen de ejemplo"
-                    />
+                    <img src={icons8_security_shield1} alt="" style={{height: '120px', marginTop: '20px'}} />
+
                     <CardContent>
-                        <Typography variant="h5" component="div" textAlign='center'>
+                        <Typography variant="h5" component="div" textAlign='center' color='white'>
                         Adhiérete a la privacidad
                         </Typography>
-                        <Typography width='400px' variant="body2" color="text.secondary" textAlign='center'>
+                        <Typography width='400px' variant="body2"  textAlign='center' color='white'>
                         Añade una nueva capa de expresión a tus chats con los stickers cifrados.
                         También puedes crear y compartir tus propios paquetes de stickers
                         </Typography>
@@ -57,17 +67,13 @@ export const SecondSection = () => {
                 </Card>
                 <Card sx={cardStyles2}
                 >
-                    <CardMedia
-                        component="img"
-                        height="140"
-                        image="url_de_tu_imagen.jpg" // Reemplaza con la URL de tu imagen
-                        alt="Imagen de ejemplo"
-                    />
+                    <img src={icons8_mms1} alt="" style={{height: '120px', marginTop: '20px'}} />
+
                     <CardContent>
-                        <Typography variant="h5" component="div" textAlign='center'>
+                        <Typography variant="h5" component="div" textAlign='center' color='white'>
                         Di lo que quieras
                         </Typography>
-                        <Typography width='400px' variant="body2" color="text.secondary" textAlign='center'>
+                        <Typography width='400px' variant="body2" textAlign='center' color='white'>
                         Envía y recibe mensajes, notas de voz, fotos, videos, GIFs y archivos 
                         gratis. Smessenger usa la conexión de datos de tu teléfono por lo que no 
                         se generan gastos por SMS o MMS.
@@ -82,17 +88,14 @@ export const SecondSection = () => {
             }}>
                 <Card sx={cardStyles}
                 >
-                    <CardMedia
-                        component="img"
-                        height="140"
-                        image="url_de_tu_imagen.jpg" // Reemplaza con la URL de tu imagen
-                        alt="Imagen de ejemplo"
-                    />
+
+                    <img src={icons8_shared_mail1} alt="" style={{height: '120px', marginTop: '20px'}} />
+
                     <CardContent>
-                        <Typography variant="h5" component="div" textAlign='center'>
+                        <Typography variant="h5" component="div" textAlign='center' color='white'>
                         Únete a grupos
                         </Typography>
-                        <Typography width='400px' variant="body2" color="text.secondary" textAlign='center'>
+                        <Typography width='400px' variant="body2" color="white" textAlign='center'>
                         Los chats de grupo te permiten conectar fácilmente con tu familia, 
                         amistades y compañeros de trabajo.
                         </Typography>
@@ -100,17 +103,15 @@ export const SecondSection = () => {
                 </Card>
                 <Card sx={cardStyles2}
                 >
-                    <CardMedia
-                        component="img"
-                        height="140"
-                        image="url_de_tu_imagen.jpg" // Reemplazar con la URL de tu imagen
-                        alt="Imagen de ejemplo"
-                    />
+                    
+                    <img src={icons8_phone_message1} alt="" style={{height: '120px', marginTop: '20px'}} />
+
+
                     <CardContent>
-                        <Typography variant="h5" component="div" textAlign='center'>
+                        <Typography variant="h5" component="div" textAlign='center' color='white'>
                         Habla con libertad
                         </Typography>
-                        <Typography width='400px' variant="body2" color="text.secondary" textAlign='center'>
+                        <Typography width='400px' variant="body2" color="white" textAlign='center'>
                         Haz llamadas y videollamadas con calidad cristalina a personas que viven 
                         al otro lado de la ciudad o al otro lado del océano sin cargos de larga 
                         distancia.
@@ -158,7 +159,7 @@ export const SecondSection = () => {
                     </Typography>
                 </Box>
 
-                <img src={guacamayo} alt="" height='380px' style={{marginTop: '-80px'}} />
+                <img src={Smessengerasset1} alt="" height='380px' style={{marginTop: '-80px'}} />
 
             </Box>
             <Box sx={{
@@ -168,7 +169,7 @@ export const SecondSection = () => {
                 marginTop: '70px'
             }}
             >
-            <img src={guacamayo} alt="" height='380px' style={{marginTop: '-80px'}} />
+            <img src={Smessengerasset5} alt="" height='380px' style={{marginTop: '-80px'}} />
                 <Box sx={{
                     display: 'flex',
                     flexDirection: 'column',
