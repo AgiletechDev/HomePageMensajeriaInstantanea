@@ -1,9 +1,9 @@
-import { FirstSection } from "../views/developers/FirstSection"
+import {FirstSection} from "../views/developers/FirstSection"
 
 const Developers = () => {
   return (
     <>
-      <FirstSection/>
+      <FirstSection />
     </>
   )
 }
