@@ -1,25 +1,35 @@
 import { Box, Button, Typography } from "@mui/material"
 import phone from '../../assets/images/phone.png'
 import Smessengerasset2 from '../../assets/images/Smessengerasset2.png'
+import Smessengerasset3 from '../../assets/images/Smessengerasset3.png'
+import PANELA from '../../assets/images/PANELA.png'
 
 export const FirstSection = () => {
   return (
       <>
         <Box sx={{
-            backgroundColor: 'red',
+            backgroundColor: 'rgba(255, 0, 0, 0.8)',
             display: 'flex',
-            justifyContent: 'space-around',
+            // justifyContent: 'space-around',
             alignItems: 'center',
             height: '90vh',
             width: '100%',
             marginTop: '40px'
         }}
         >
+
+            <img src={Smessengerasset3} alt="" style={{position: 'absolute', left: '5%', height: '80%', zIndex: '-1' }} />
+            
+            <img src={PANELA} alt="" style={{position: 'absolute', right: '0', height: '100%',  zIndex: '0' }} />
+
             <Box sx={{
                 display: 'flex',
                 flexDirection: 'column',
-                width: '400px'
-            }}>
+                width: '350px',
+                zIndex: '2',
+                marginLeft: '10%'
+            }}
+            >
                 <Typography color='white' variant="h1" sx={{
                     fontSize: '45px',
                     fontWeight: '600',
