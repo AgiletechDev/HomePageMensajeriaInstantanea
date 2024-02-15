@@ -1,5 +1,14 @@
-import { Box, Typography, Input, IconButton, useTheme } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Input,
+  IconButton,
+  useTheme,
+  TextareaAutosize,
+  Button,
+} from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
+import HelpBoxes from "../../components/HelpBoxes";
 
 const FirstSection = () => {
   const theme = useTheme();
@@ -10,7 +19,6 @@ const FirstSection = () => {
         display: "flex",
         flexDirection: "column",
         margin: "auto",
-
         pt: "4em",
         backgroundColor: theme.palette.primary.main,
         zIndex: "-1",
@@ -26,7 +34,7 @@ const FirstSection = () => {
       >
         <Typography
           variant="h1"
-          fontSize="40px"
+          fontSize="45px"
           textAlign="center"
           color={theme.palette.textLight.main}
           fontWeight="bold"
@@ -62,154 +70,169 @@ const FirstSection = () => {
           />
         </Box>
       </Box>
+      <HelpBoxes />
 
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-         
-          gap: "1em",
-          backgroundColor: theme.palette.secondary.second,
-          borderRadius: "50px 50px 0px 0",
-          zIndex: "1",
-          padding: "3em",
-        }}
-      >
-        <Box sx={{ display: "flex", gap: "30px",    maxWidth:'1100px', }}>
-          <Box
-            sx={{
-              background: theme.palette.secondary.main,
-              width: "300px",
-              borderRadius: "15px",
-              padding: "1em 3em 1em 3em",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <Typography
-              variant="h6"
-              fontWeight="bold"
-              textAlign="center"
-              color={theme.palette.textLight.main}
-            >
-              Empezando
-            </Typography>
-            <Typography
-              variant="p"
-              textAlign="center"
-              color={theme.palette.textLight.main}
-            >
-              Comprende los conceptos básicos de Smessenger en Android, iOS y
-              Desktop
-            </Typography>
-          </Box>
-          <Box
-            sx={{
-              background: theme.palette.secondary.main,
-              width: "300px",
-              borderRadius: "15px",
-              padding: "1em 3em 1em 3em",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <Typography
-              variant="h6"
-              fontWeight="bold"
-              textAlign="center"
-              color={theme.palette.textLight.main}
-            >
-              Características
-            </Typography>
-            <Typography
-              variant="p"
-              textAlign="center"
-              color={theme.palette.textLight.main}
-            >
-              Explora todas las características de la mensajería privada
-            </Typography>
-          </Box>
-          <Box
-            sx={{
-              background: theme.palette.secondary.main,
-              width: "300px",
-              borderRadius: "15px",
-              padding: "1em 3em 1em 3em",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <Typography
-              variant="h6"
-              fontWeight="bold"
-              textAlign="center"
-              color={theme.palette.textLight.main}
-            >
-              Seguridad
-            </Typography>
-            <Typography
-              variant="body"
-              textAlign="center"
-              color={theme.palette.textLight.main}
-            >
-              Esta sección contiene preguntas habituales sobre la seguridad y
-              fiabilidad de la tecnología en las aplicaciones
-            </Typography>
-          </Box>
-        </Box>
-        <Box sx={{ display: "flex", gap: "30px",    maxWidth:'1100px',  }}>
-          <Box
-            sx={{
-              background: theme.palette.secondary.main,
-              width: "600px",
-              borderRadius: "15px",
-              padding: "5px",
-            }}
-          >
-            <Typography
-              variant="h6"
-              fontWeight="bold"
-              textAlign="center"
-              color={theme.palette.textLight.main}
-            >
-              Solución de problemas
-            </Typography>
-          </Box>
-          <Box
-            sx={{
-              background: theme.palette.secondary.main,
-              width: "600px",
-              borderRadius: "15px",
-              padding: "5px",
-            }}
-          >
-            <Typography
-              variant="h6"
-              fontWeight="bold"
-              textAlign="center"
-              color={theme.palette.textLight.main}
-            >
-              General
-            </Typography>
-          </Box>
-        </Box>
-      </Box>
-      
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
+          justifyContent:'center',
           gap: "1em",
           backgroundColor: theme.palette.textLight.main,
           zIndex: "1",
-          padding: "3em",
+          padding: "5em",
         }}
-      ></Box>
+      >
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "30px",
+            maxWidth: "600px",
+            width: "600px",
+          }}
+        >
+          <Typography
+            variant="h1"
+            fontSize="45px"
+            fontWeight="bold"
+            textAlign="center"
+          >
+            Enviar una solicitud
+          </Typography>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              width: "100%",
+              margin: "auto",
+              background: "rgba(255, 255, 255, 0.9)",
+              borderRadius: "5px",
+              border: "1px solid #79747e",
+              padding: "10px",
+            }}
+          >
+            <Input
+              placeholder="Correo Eléctronico *"
+              fullWidth
+              disableUnderline
+              sx={{
+                "& input": {
+                  paddingLeft: "5px",
+                },
+              }}
+            />
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              width: "100%",
+              margin: "auto",
+              background: "rgba(255, 255, 255, 0.9)",
+              borderRadius: "5px",
+              border: "1px solid #79747e",
+              padding: "10px",
+            }}
+          >
+            <Input
+              placeholder="Vuelve a introducir tu dirección de correo electrónico *"
+              fullWidth
+              disableUnderline
+              sx={{
+                "& input": {
+                  paddingLeft: "5px",
+                },
+              }}
+            />
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              width: "100%",
+              margin: "auto",
+              background: "rgba(255, 255, 255, 0.9)",
+              borderRadius: "5px",
+              border: "1px solid #79747e",
+              padding: "10px",
+            }}
+          >
+            <Input
+              placeholder="¿Cuál es tu consulta? *"
+              fullWidth
+              disableUnderline
+              sx={{
+                "& input": {
+                  paddingLeft: "5px",
+                },
+              }}
+            />
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              width: "100%",
+              margin: "auto",
+              background: "rgba(255, 255, 255, 0.9)",
+              borderRadius: "5px",
+              border: "1px solid #79747e",
+              padding: "10px",
+            }}
+          >
+            <Input
+              placeholder="¿Para qué plataforma es? *"
+              fullWidth
+              disableUnderline
+              sx={{
+                "& input": {
+                  paddingLeft: "5px",
+                },
+              }}
+            />
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              width: "100%",
+              margin: "auto",
+              background: "rgba(255, 255, 255, 0.9)",
+              borderRadius: "5px",
+              border: "1px solid #79747e",
+              padding: "10px",
+            }}
+          >
+            <TextareaAutosize
+              minRows={5}
+              placeholder="Descripción"
+              style={{
+                width: "100%",
+                border: "none",
+                resize: "none",
+                fontSize: theme.typography.fontSize,
+                fontFamily: theme.typography.fontFamily,
+                outline: "none",
+              }}
+            />
+          </Box>
+          <Button
+        
+            sx={{
+              background: theme.palette.textDark.main,
+              textAlign: 'center',
+              width:'620px',
+              mx: 'auto',
+              borderRadius: "10px",
+              color:theme.palette.textLight.main,
+            }}
+          >
+            Enviar
+          </Button>
+        </Box>
+      </Box>
     </Box>
   );
 };

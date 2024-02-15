@@ -1,5 +1,5 @@
-import React from 'react'
-import { FirstSection } from '../views/getMessenger'
+import { FirstSection } from "../views/GetMessenger/FirstSection"
+
 
 const GetMessenger = () => {
   return (

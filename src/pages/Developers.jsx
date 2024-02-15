@@ -1,4 +1,4 @@
-// import FirstSection from "../views/Developers"
+
 
 import { FirstSection } from "../views/Developers/FirstSection"
 
