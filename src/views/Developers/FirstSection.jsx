@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material'
-import ciudad from '../../assets/images/ciudadWhiteAndBlack.jpg'
-
+import ciudad from '../../assets/images/Smessengerasset6.png'
+import pet from '../../assets/images/Smessengerasset1.png'
 
 const data = [
     {
@@ -34,16 +34,19 @@ export const FirstSection = () => {
         <Box sx={{
             height: '500px',
             width: '100%',
-            background: `url(${ciudad})`,
-            backgroundSize: 'cover'
+            background: `url(${ciudad}) center / cover no-repeat`,
+            zIndex:'1'
         }}
         >
+       
             <Box sx={{
                 position: 'absolute',
                 top: '200px',
                 left: '10%',
             }}
+         
             >
+                  <img src={pet} style={{zIndex:'2',position: 'absolute', left: '120%',width:'120%', top:'-150%'}}/>
                 <Typography variant="h3" color='white' style={{
                     fontWeight: '600',
                     marginBottom: '10px'
