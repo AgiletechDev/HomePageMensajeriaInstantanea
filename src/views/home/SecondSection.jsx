@@ -1,4 +1,4 @@
-import { Box, Button, Card, CardContent, CardMedia, Typography } from "@mui/material"
+import { Box, Button, Card, CardContent, CardMedia, Typography, useTheme } from "@mui/material"
 import Smessenger from '../../assets/images/Smessenger_asset6.png'
 import guacamayo from '../../assets/images/guacamayo.jpg'
 import icons8_mms1 from '../../assets/icons/icons8_mms1.png'
@@ -32,6 +32,7 @@ const cardStyles2 = {
   };
 
 export const SecondSection = () => {
+    const theme = useTheme();
   return (
     <>
         <Box sx={{
@@ -50,6 +51,8 @@ export const SecondSection = () => {
 
             <Box sx={{
                 display: 'flex',
+                width:'1100px',
+                justifyContent:'space-between'
             }}>
                 <Card sx={cardStyles}
                 >
@@ -84,7 +87,9 @@ export const SecondSection = () => {
             
             <Box sx={{
                 display: 'flex',
-                marginTop: '20px'
+                marginTop: '50px',
+                width:'1100px',
+                justifyContent:'space-between'
             }}>
                 <Card sx={cardStyles}
                 >
@@ -124,7 +129,7 @@ export const SecondSection = () => {
         
 
         <Box sx={{
-            backgroundColor: 'red',
+            backgroundColor: theme.palette.primary.main,
             backgroundSize: 'cover',
             height: '900px',
             width: '100%',
@@ -139,19 +144,20 @@ export const SecondSection = () => {
         >
             <Box sx={{
                 display: 'flex',
-                width: '100%',
-                justifyContent: 'space-around'
+                width:'1100px',
+                justifyContent: 'space-between'
             }}
             >
                 <Box sx={{
                     display: 'flex',
                     flexDirection: 'column',
+                   
                 }}
                 >
                     <Typography variant="h5" fontWeight='600' color='white' width='300px' >
                         Sin publicidad. Sin seguimiento. Sin bromas.
                     </Typography>
-                    <Typography  color='white' width='480px' marginTop='20px' >
+                    <Typography  color='white' width='480px' marginTop='20px' textAlign="justify">
                     No tenemos anuncios, ni vendedores afiliados, ni hacemos un
                     rastreo de tu uso de Smessenger. Así que concéntrate en
                     compartir los momentos que te importan con las personas que te
@@ -159,13 +165,13 @@ export const SecondSection = () => {
                     </Typography>
                 </Box>
 
-                <img src={Smessengerasset1} alt="" height='380px' style={{marginTop: '-80px'}} />
+                <img src={Smessengerasset1} alt="" height='450px' style={{marginTop: '-80px'}} />
 
             </Box>
             <Box sx={{
                 display: 'flex',
-                width: '100%',
-                justifyContent: 'space-around',
+                width:'1100px',
+                justifyContent: 'space-between',
                 marginTop: '70px'
             }}
             >
@@ -178,7 +184,7 @@ export const SecondSection = () => {
                     <Typography variant="h5" fontWeight='600' color='white' width='300px' >
                     Gratis para todo el mundo
                     </Typography>
-                    <Typography  color='white' width='480px' marginTop='20px' >
+                    <Typography  color='white' width='480px' marginTop='20px' textAlign="justify">
                     Smessenger es una organización independiente sin ánimo de 
                     lucro. No dependemos de ninguna compañía tecnológica 
                     importante, y tampoco podemos ser adquiridos por una. El 

@@ -13,10 +13,16 @@ const ContainerSection = ({ image, title, paragraph, marginLeft }) => (
     }}
   >
     <img src={image} alt="" style={{ height: "50px", marginBottom: "20px" }} />
-    <Typography variant="h5" color="red" fontWeight="600" marginBottom="20px">
+    <Typography
+      variant="h5"
+      color="red"
+      fontWeight="600"
+      marginBottom="20px"
+      sx={{ maxWidth: "300px", textAlign: "center" }}
+    >
       {title}
     </Typography>
-    <Typography textAlign="center" sx={{ maxWidth: "300px" }}>
+    <Typography textAlign="center" sx={{ maxWidth: "250px" }}>
       {paragraph}
     </Typography>
   </Box>
@@ -37,7 +43,7 @@ const FirstSection = () => {
           sx={{
             position: "absolute",
             top: "200px",
-            left: "10%",
+            left: "11%",
             width: "560px",
           }}
         >
@@ -69,6 +75,7 @@ const FirstSection = () => {
           paddingX: "100px",
           display: "flex",
           flexDirection: "column",
+          mb:'8em'
         }}
       >
         {/* 3 columns */}
@@ -136,6 +143,7 @@ const FirstSection = () => {
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
+         
           }}
         >
           <Typography
@@ -152,6 +160,7 @@ const FirstSection = () => {
               width: "100%",
               maxWidth: "1100px",
               marginTop: "50px",
+              paddingBottom: "5em",
             }}
           >
             <tbody>
@@ -182,11 +191,10 @@ const FirstSection = () => {
               </tr>
             </tbody>
           </table>
+          <Typography fontSize="10px" textAlign="center" marginTop="30px">
+            Sorry, we are not seeking interns at this time.
+          </Typography>
         </Box>
-
-        <Typography fontSize="10px" textAlign="center" marginTop="30px">
-          Sorry, we are not seeking interns at this time.
-        </Typography>
       </Box>
     </>
   );
