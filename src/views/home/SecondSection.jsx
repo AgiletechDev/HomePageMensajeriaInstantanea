@@ -1,6 +1,5 @@
-import { Box, Button, Card, CardContent, CardMedia, Typography } from "@mui/material"
+import { Box, Button, Card, CardContent, Typography, useTheme } from "@mui/material"
 import Smessenger from '../../assets/images/Smessenger_asset6.png'
-import guacamayo from '../../assets/images/guacamayo.jpg'
 import icons8_mms1 from '../../assets/icons/icons8_mms1.png'
 import icons8_security_shield1 from '../../assets/icons/icons8_security_shield1.png'
 import icons8_shared_mail1 from '../../assets/icons/icons8_shared_mail1.png'
@@ -36,6 +35,7 @@ export const SecondSection = () => {
 
     const { t } = useTranslation();
 
+    const theme = useTheme();
   return (
     <>
         <Box sx={{
@@ -54,6 +54,8 @@ export const SecondSection = () => {
 
             <Box sx={{
                 display: 'flex',
+                width:'1100px',
+                justifyContent:'space-between'
             }}>
                 <Card sx={cardStyles}
                 >
@@ -85,7 +87,9 @@ export const SecondSection = () => {
             
             <Box sx={{
                 display: 'flex',
-                marginTop: '20px'
+                marginTop: '50px',
+                width:'1100px',
+                justifyContent:'space-between'
             }}>
                 <Card sx={cardStyles}
                 >
@@ -122,7 +126,7 @@ export const SecondSection = () => {
         
 
         <Box sx={{
-            backgroundColor: 'red',
+            backgroundColor: theme.palette.primary.main,
             backgroundSize: 'cover',
             height: '900px',
             width: '100%',
@@ -137,13 +141,14 @@ export const SecondSection = () => {
         >
             <Box sx={{
                 display: 'flex',
-                width: '100%',
-                justifyContent: 'space-around'
+                width:'1100px',
+                justifyContent: 'space-between'
             }}
             >
                 <Box sx={{
                     display: 'flex',
                     flexDirection: 'column',
+                   
                 }}
                 >
                     <Typography variant="h5" fontWeight='600' color='white' width='300px' >
@@ -154,13 +159,13 @@ export const SecondSection = () => {
                     </Typography>
                 </Box>
 
-                <img src={Smessengerasset1} alt="" height='380px' style={{marginTop: '-80px'}} />
+                <img src={Smessengerasset1} alt="" height='450px' style={{marginTop: '-80px'}} />
 
             </Box>
             <Box sx={{
                 display: 'flex',
-                width: '100%',
-                justifyContent: 'space-around',
+                width:'1100px',
+                justifyContent: 'space-between',
                 marginTop: '70px'
             }}
             >

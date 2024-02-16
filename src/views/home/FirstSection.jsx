@@ -1,7 +1,7 @@
-import { Box, Button, Typography } from "@mui/material"
-import phone from '../../assets/images/phone.png'
+import { Box, Button, Typography, useTheme } from "@mui/material"
 import Smessengerasset2 from '../../assets/images/Smessengerasset2.png'
 import Smessengerasset3 from '../../assets/images/Smessengerasset3.png'
+import phone3 from '../../assets/images/phonemain.png'
 import PANELA from '../../assets/images/PANELA.png'
 import { useTranslation } from 'react-i18next'
 
@@ -9,12 +9,13 @@ export const FirstSection = () => {
 
   const { t } = useTranslation();
 
+    const theme = useTheme();
+    
   return (
       <>
         <Box sx={{
-            backgroundColor: 'rgba(255, 0, 0, 0.8)',
+            backgroundColor: 'rgba(216,34,44,0.8)',
             display: 'flex',
-            // justifyContent: 'space-around',
             alignItems: 'center',
             height: '90vh',
             width: '100%',
@@ -26,12 +27,14 @@ export const FirstSection = () => {
             
             <img src={PANELA} alt="" style={{position: 'absolute', right: '0', height: '100%',  zIndex: '0' }} />
 
+            <img src={phone3} alt="" style={{position: 'absolute', right: '15%',  zIndex: '1', top:'25%' }} />
+
             <Box sx={{
                 display: 'flex',
                 flexDirection: 'column',
                 width: '350px',
                 zIndex: '2',
-                marginLeft: '10%'
+                marginLeft: '11%'
             }}
             >
                 <Typography color='white' variant="h1" sx={{
@@ -81,7 +84,7 @@ export const FirstSection = () => {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
-                width: '100%'
+                width: '1100px',
             }}>
                 <Typography variant="h2" sx={{
                     fontSize: '35px',
@@ -97,7 +100,8 @@ export const FirstSection = () => {
                 <Box sx={{
                     display: 'flex',
                     justifyContent: 'space-beetween',
-                    marginTop: '20px'
+                    marginTop: '20px',
+                    gap:'80px'
                 }}
                 >
 
