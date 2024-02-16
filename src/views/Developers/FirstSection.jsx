@@ -1,21 +1,9 @@
 import { Box, Typography } from '@mui/material'
 import ciudad from '../../assets/images/Smessengerasset6.png'
 import pet from '../../assets/images/Smessengerasset1.png'
+import { useTranslation } from 'react-i18next'
 
-const data = [
-    {
-        title: 'XEdDSA and VXEdDSA',
-        paragraph: 'This document describes how to create and verify EdDSA-compatible signatures using public key and private key formats initially defined for the X25519 and X448 elliptic curve Diffie-Hellman functions. This document also describes VXEdDSA which extends XEdDSA to make it a verifiable random function, or VRF.'
-    },
-    {
-        title: 'X3DH',
-        paragraph: 'This document describes the "X3DH" (or "Extended Triple Diffie-Hellman") key agreement protocol. X3DH establishes a shared secret key between two parties who mutually authenticate each other based on public keys. X3DH provides forward secrecy and cryptographic deniability."'
-    },
-    {
-        title: 'PQXDH',
-        paragraph: 'This document describes the "PQXDH" (or "Post-Quantum Extended Diffie-Hellman") key agreement protocol. PQXDH establishes a shared secret key between two parties who mutually authenticate each other based on public keys. PQXDH provides post-quantum forward secrecy and a form of cryptographic deniability but still relies on the hardness of the discrete log problem for mutual authentication in this revision of the protocol.'
-    },
-];
+
 
 const Description = ({title, paragraph})=>(
     <Box marginTop='20px'>
@@ -29,6 +17,23 @@ const Description = ({title, paragraph})=>(
 )
 
 export const FirstSection = () => {
+
+  const { t } = useTranslation();
+  
+  const data = [
+    {
+        title: t("DEVELOPERS_USERS5"),
+        paragraph: t("DEVELOPERS_USERS6")
+    },
+    {
+        title: t("DEVELOPERS_USERS7"),
+        paragraph: t("DEVELOPERS_USERS8")
+    },
+    {
+        title: t("DEVELOPERS_USERS9"),
+        paragraph: t("DEVELOPERS_USERS10")
+    },
+];
   return (
     <>
         <Box sx={{
@@ -52,10 +57,10 @@ export const FirstSection = () => {
                     marginBottom: '10px'
                 }}
                 >
-                    Technical information
+                    {t("DEVELOPERS_USERS1")}
                 </Typography>
                 <Typography color='white'>
-                    Specifications and software libraries for developers
+                    {t("DEVELOPERS_USERS2")}
                 </Typography>
             </Box>
 
@@ -79,13 +84,10 @@ export const FirstSection = () => {
             }}
             >
                 <Typography variant='h4' fontWeight='600' marginTop='20px'>
-                    Specifications
+                    {t("DEVELOPERS_USERS3")}
                 </Typography>
                 <Typography marginTop='20px' fontWeight='600'>
-                    Encryption in messaging environments integrates many ideas which
-                    often need to be composed separately in different applications. We
-                    make an effort to break out ideas into independent specifications so
-                    that they can be integrated as appropriate for different projects
+                    {t("DEVELOPERS_USERS4")}
                 </Typography>
 
                 {
@@ -95,34 +97,26 @@ export const FirstSection = () => {
                 }
 
 
-                <Typography variant='h4' fontWeight='600' marginTop='50px'>
-                    Software libraries
+                <Typography variant='h4' fontWeight='600' marginTop='20px'>
+                    {t("DEVELOPERS_USERS11")}
                 </Typography>
 
-                <Typography variant='h6' fontWeight='600'  color='red' marginTop='30px'>
-                    Smessenger Protocol library
+                <Typography variant='h6' fontWeight='600'  color='red' marginTop='10px'>
+                    {t("DEVELOPERS_USERS12")}
                 </Typography>
 
             </Box>
 
-            <Box marginTop='190px' width='50%' marginLeft='50px'>
+            <Box marginTop='150px' width='50%' marginLeft='50px'>
 
                 <Description
-                    title='Double Ratchet'
-                    paragraph='This document describes the Double Ratchet algorithm, which is used by two parties
-                    to exchange encrypted messages based on a shared secret key. The parties derive
-                    new keys for every Double Ratchet message so that earlier keys cannot be calculated 
-                    from later ones. The parties also send Diffie-Hellman public values attached to their 
-                    messages. The results of Diffie-Hellman calculations are mixed into the derived keys 
-                    so that later keys cannot be calculated from earlier ones. These properties give some 
-                    protection to earlier or later encrypted messages in case of a compromise of a party s 
-                    keys.'
+                    title={t("DEVELOPERS_USERS13")}
+                    paragraph={t("DEVELOPERS_USERS14")}
                 />
 
                <Description
-                    title='Sesame'
-                    paragraph='This document describes the Sesame algorithm for managing message encryption
-                    sessions in an asynchronous and multi-device setting.'
+                    title={t("DEVELOPERS_USERS15")}
+                    paragraph={t("DEVELOPERS_USERS16")}
                />
 
             </Box>

@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import ciudad from "../../assets/images/Smessengerasset6.png";
 import iconCarrers from "../../assets/images/iconCarrers.png";
+import { useTranslation } from 'react-i18next'
 
 const ContainerSection = ({ image, title, paragraph, marginLeft }) => (
   <Box
@@ -23,6 +24,9 @@ const ContainerSection = ({ image, title, paragraph, marginLeft }) => (
 );
 
 const FirstSection = () => {
+  
+  const { t } = useTranslation();
+
   return (
     <>
       <Box
@@ -49,13 +53,11 @@ const FirstSection = () => {
               marginBottom: "10px",
             }}
           >
-            Work that sends a message
+            {t("CAREERS_FIRSTSECTION1")}
           </Typography>
 
           <Typography color="white">
-            Millions of people use Smessenger every day to share the moments
-            that matter in their lives. Join an organization that empowers users
-            by making private communication simple.
+            {t("CAREERS_FIRSTSECTION2")}
           </Typography>
         </Box>
       </Box>
@@ -82,21 +84,21 @@ const FirstSection = () => {
         >
           <ContainerSection
             image={iconCarrers}
-            title="Privacy First"
-            paragraph="We solve problems that matter and develop technology that respects our users. Targeted advertising isn't our style. We don't collect anything except more sleep at night."
+            title={t("CAREERS_FIRSTSECTION3")}
+            paragraph={t("CAREERS_FIRSTSECTION4")}
           />
 
           <ContainerSection
             image={iconCarrers}
-            title="Small Team"
-            paragraph="Have an immediate impact. Smessenger is an opportunity to do original work and closely collaborate without the overhead of endless meetings."
+            title={t("CAREERS_FIRSTSECTION5")}
+            paragraph={t("CAREERS_FIRSTSECTION6")}
             marginLeft="20px"
           />
 
           <ContainerSection
             image={iconCarrers}
-            title="Competitive Compensation"
-            paragraph="Healthcare premiums are fully covered for you and your family. Our 401(k) plan matches 100% of your contribution up to "
+            title={t("CAREERS_FIRSTSECTION7")}
+            paragraph={t("CAREERS_FIRSTSECTION8")}
             marginLeft="20px"
           />
         </Box>
@@ -111,21 +113,21 @@ const FirstSection = () => {
         >
           <ContainerSection
             image={iconCarrers}
-            title="Work Remotely"
-            paragraph="Skip the commute. Work from home or take advantage of our co-working space subsidy. Focus on what drives you, not driving"
+            title={t("CAREERS_FIRSTSECTION9")}
+            paragraph={t("CAREERS_FIRSTSECTION10")}
           />
 
           <ContainerSection
             image={iconCarrers}
-            title="Open Source"
-            paragraph="Everything we produce is open source. Every time we write code, we get to share it with the world"
+            title={t("CAREERS_FIRSTSECTION11")}
+            paragraph={t("CAREERS_FIRSTSECTION12")}
             marginLeft="20px"
           />
 
           <ContainerSection
             image={iconCarrers}
-            title="Nonprofit"
-            paragraph="Our goal is to protect free expression and enable secure global communication. We're working with users to build something sustainable"
+            title={t("CAREERS_FIRSTSECTION13")}
+            paragraph={t("CAREERS_FIRSTSECTION14")}
             marginLeft="20px"
           />
         </Box>
@@ -144,7 +146,7 @@ const FirstSection = () => {
             marginTop="150px"
             textAlign="center"
           >
-            Open Roles
+            {t("CAREERS_FIRSTSECTION15")}
           </Typography>
           <table
             style={{

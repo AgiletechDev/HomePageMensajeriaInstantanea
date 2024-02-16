@@ -7,6 +7,7 @@ import icons8_shared_mail1 from '../../assets/icons/icons8_shared_mail1.png'
 import icons8_phone_message1 from '../../assets/icons/icons8_phone_message1.png'
 import Smessengerasset1 from '../../assets/images/Smessengerasset1.png'
 import Smessengerasset5 from '../../assets/images/Smessengerasset5.png'
+import { useTranslation } from 'react-i18next'
 
 const cardStyles = {
     backgroundColor: 'rgba(255, 255, 255, 0.1)', 
@@ -32,6 +33,9 @@ const cardStyles2 = {
   };
 
 export const SecondSection = () => {
+
+    const { t } = useTranslation();
+
   return (
     <>
         <Box sx={{
@@ -57,11 +61,10 @@ export const SecondSection = () => {
 
                     <CardContent>
                         <Typography variant="h5" component="div" textAlign='center' color='white'>
-                        Adhiérete a la privacidad
+                            {t("HOME1_SECONDSECTION1")}
                         </Typography>
                         <Typography width='400px' variant="body2"  textAlign='center' color='white'>
-                        Añade una nueva capa de expresión a tus chats con los stickers cifrados.
-                        También puedes crear y compartir tus propios paquetes de stickers
+                            {t("HOME1_SECONDSECTION2")}
                         </Typography>
                     </CardContent>
                 </Card>
@@ -71,12 +74,10 @@ export const SecondSection = () => {
 
                     <CardContent>
                         <Typography variant="h5" component="div" textAlign='center' color='white'>
-                        Di lo que quieras
+                            {t("HOME1_SECONDSECTION3")}
                         </Typography>
                         <Typography width='400px' variant="body2" textAlign='center' color='white'>
-                        Envía y recibe mensajes, notas de voz, fotos, videos, GIFs y archivos 
-                        gratis. Smessenger usa la conexión de datos de tu teléfono por lo que no 
-                        se generan gastos por SMS o MMS.
+                            {t("HOME1_SECONDSECTION4")}
                         </Typography>
                     </CardContent>
                 </Card>
@@ -93,11 +94,10 @@ export const SecondSection = () => {
 
                     <CardContent>
                         <Typography variant="h5" component="div" textAlign='center' color='white'>
-                        Únete a grupos
+                            {t("HOME1_SECONDSECTION5")}
                         </Typography>
                         <Typography width='400px' variant="body2" color="white" textAlign='center'>
-                        Los chats de grupo te permiten conectar fácilmente con tu familia, 
-                        amistades y compañeros de trabajo.
+                            {t("HOME1_SECONDSECTION6")}
                         </Typography>
                     </CardContent>
                 </Card>
@@ -109,12 +109,10 @@ export const SecondSection = () => {
 
                     <CardContent>
                         <Typography variant="h5" component="div" textAlign='center' color='white'>
-                        Habla con libertad
+                            {t("HOME1_SECONDSECTION7")}
                         </Typography>
                         <Typography width='400px' variant="body2" color="white" textAlign='center'>
-                        Haz llamadas y videollamadas con calidad cristalina a personas que viven 
-                        al otro lado de la ciudad o al otro lado del océano sin cargos de larga 
-                        distancia.
+                            {t("HOME1_SECONDSECTION8")}
                         </Typography>
                     </CardContent>
                 </Card>
@@ -149,13 +147,10 @@ export const SecondSection = () => {
                 }}
                 >
                     <Typography variant="h5" fontWeight='600' color='white' width='300px' >
-                        Sin publicidad. Sin seguimiento. Sin bromas.
+                        {t("HOME1_SECONDSECTION9")}
                     </Typography>
                     <Typography  color='white' width='480px' marginTop='20px' >
-                    No tenemos anuncios, ni vendedores afiliados, ni hacemos un
-                    rastreo de tu uso de Smessenger. Así que concéntrate en
-                    compartir los momentos que te importan con las personas que te
-                    importan.
+                        {t("HOME1_SECONDSECTION10")}
                     </Typography>
                 </Box>
 
@@ -176,14 +171,10 @@ export const SecondSection = () => {
                 }}
                 >
                     <Typography variant="h5" fontWeight='600' color='white' width='300px' >
-                    Gratis para todo el mundo
+                        {t("HOME1_SECONDSECTION11")}
                     </Typography>
                     <Typography  color='white' width='480px' marginTop='20px' >
-                    Smessenger es una organización independiente sin ánimo de 
-                    lucro. No dependemos de ninguna compañía tecnológica 
-                    importante, y tampoco podemos ser adquiridos por una. El 
-                    desarrollo de Smessenger se sostiene con subvenciones y 
-                    donaciones de gente interesada en la privacidad como tú.
+                        {t("HOME1_SECONDSECTION12")}
                     </Typography>
 
                     <Button variant="contained" color="textDark" sx={{
@@ -195,7 +186,7 @@ export const SecondSection = () => {
                     marginTop: '20px'
                     }}
                     >
-                        Descargar Smessenger
+                        {t("HOME1_BUTTON")}
                     </Button>
 
                 </Box>

@@ -2,6 +2,7 @@ import { Box, Button, Typography } from "@mui/material"
 import ciudad from '../../assets/images/ciudadWhiteAndBlack.jpg'
 import Smessengerasset9 from '../../assets/images/Smessengerasset9.png'
 import Smessengerasset4 from '../../assets/images/Smessengerasset4.png'
+import { useTranslation } from 'react-i18next'
 
 const SectionCard = ({title, image,children, imageHeight, imageMarginBottom})=>(
     <Box sx={{
@@ -35,6 +36,9 @@ const SectionCard = ({title, image,children, imageHeight, imageMarginBottom})=>(
     )
 
 export const FirstSection = () => {
+
+  const { t } = useTranslation();
+
   return (
     <>
         <Box sx={{
@@ -46,7 +50,7 @@ export const FirstSection = () => {
         >
 
             <SectionCard
-                title='Smessenger para dispositivos móviles'
+                title={t("GETMESSENGER_FIRSTSECTION1")}
                 image={Smessengerasset4}
                 imageHeight='390px'
                 imageMarginBottom='-180px'
@@ -82,13 +86,13 @@ export const FirstSection = () => {
                 </Box>
 
                 <Typography marginTop='30px' textAlign='center'>
-                    O visita Smessenger.org/install desde tu teléfono
+                    {t("GETMESSENGER_FIRSTSECTION2")}
                 </Typography>
 
             </SectionCard>
 
 
-            <SectionCard title='Smessenger para Escritorio' 
+            <SectionCard title={t("GETMESSENGER_FIRSTSECTION3")} 
             image={Smessengerasset9}  
             imageHeight='315px'
             imageMarginBottom='-70px'
@@ -106,7 +110,7 @@ export const FirstSection = () => {
                     marginBottom: '20px'
                 }}
                 >
-                    Descarga para Windows
+                    {t("GETMESSENGER_FIRSTSECTION4")}
                 </Button>
 
 
@@ -117,8 +121,7 @@ export const FirstSection = () => {
                         padding: '10px'
                     }}
                 >
-                    Para usar la aplicación de escritorio, Smessenger debe estar instalada y configurada 
-                    previamente en tu teléfono
+                    {t("GETMESSENGER_FIRSTSECTION5")}
                 </Typography>
 
             </SectionCard>

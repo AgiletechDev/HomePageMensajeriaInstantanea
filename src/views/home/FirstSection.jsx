@@ -3,8 +3,12 @@ import phone from '../../assets/images/phone.png'
 import Smessengerasset2 from '../../assets/images/Smessengerasset2.png'
 import Smessengerasset3 from '../../assets/images/Smessengerasset3.png'
 import PANELA from '../../assets/images/PANELA.png'
+import { useTranslation } from 'react-i18next'
 
 export const FirstSection = () => {
+
+  const { t } = useTranslation();
+
   return (
       <>
         <Box sx={{
@@ -35,11 +39,11 @@ export const FirstSection = () => {
                     fontWeight: '600',
                     width: '300px',
                 }}>
-                    Habla con libertad
+                    {t("HOME1_FIRSTSECTION")}
                 </Typography>
                         
                 <Typography color='white' textAlign='justify' marginTop='15px' marginBottom='15px'>
-                Di «hola» a una manera diferente de chatear: Smessenger se enfoca en la privacidad, pero con todas las características que esperas de una aplicación de chat
+                    {t("HOME1_FIRSTSECTION2")}
                 </Typography>
                         
                 <Button variant="contained" color="textDark" sx={{
@@ -50,7 +54,7 @@ export const FirstSection = () => {
                     color: 'white'
                 }}
                 >
-                    Descargar Smessenger
+                    {t("HOME1_BUTTON")}
                 </Button>
 
             </Box>
@@ -83,11 +87,11 @@ export const FirstSection = () => {
                     fontSize: '35px',
                     fontWeight: '600',
                 }}>
-                    ¿Por qué usar Smessenger?
+                    {t("HOME1_FIRSTSECTION3")}
                 </Typography>
                         
                 <Typography textAlign='justify' marginTop='25px' marginBottom='25px'>
-                Continúa hacia abajo para comprobar por qué Smessenger es una aplicación de chat simple, potente y segura
+                    {t("HOME1_FIRSTSECTION4")}
                 </Typography>
                         
                 <Box sx={{
@@ -103,17 +107,9 @@ export const FirstSection = () => {
                         marginRight: '40px'
                     }}
                     >
-                        <Typography fontWeight='600' fontSize='25px' width='300px'>Comparte sin inseguridades</Typography>
+                        <Typography fontWeight='600' fontSize='25px' width='300px'>{t("HOME1_FIRSTSECTION5")}</Typography>
                         <Typography   width='350px'>
-                            El cifrado de extremo a extremo de última 
-                            generación (respaldado por el protocolo de 
-                            código abierto de Smessenger) mantiene tus 
-                            chats seguros. Ni nosotros podemos acceder 
-                            a tu lista de contactos, leer tus mensajes, ni 
-                            escuchar tus llamadas. Tampoco nadie más.
-                            La privacidad no es un modo opcional, es 
-                            cómo funciona Smessenger. En todos tus 
-                            mensajes, todas tus llamadas, para siempre.
+                            {t("HOME1_FIRSTSECTION6")}
                         </Typography>
                             
                     </Box>
