@@ -1,6 +1,6 @@
 import { Box, Button, Typography, useTheme  } from "@mui/material"
-import Smessengerasset9 from '../../assets/images/Smessengerasset9.png'
-import Smessengerasset4 from '../../assets/images/Smessengerasset4.png'
+import Smessengerasset9 from '../../assets/images/pag2/mov.png'
+import Smessengerasset4 from '../../assets/images/pag2/esc.png'
 import { useTranslation } from 'react-i18next'
 
 
@@ -86,8 +86,8 @@ export const FirstSection = () => {
             <SectionCard
                 title={t("GETMESSENGER_FIRSTSECTION1")}
                 image={Smessengerasset4}
-                imageHeight='390px'
-                imageMarginBottom='-180px'
+                imageHeight='100%'
+                imageMarginBottom='0px'
             >
                 <Box sx={{
                     display: 'flex',
@@ -96,28 +96,28 @@ export const FirstSection = () => {
                 >
                     <Button 
                       variant="contained" 
-                      color="textDark" 
                       sx={{
                         width: '49%',
                         fontSize: '15px',
                         borderRadius: '20px',
                         textTransform: 'none',
                         color: 'white',
-                        marginTop: '20px'
+                        marginTop: '20px',
+                        background:theme.palette.primary.main,
                         }}
                         >
                             Android
                     </Button>
                     <Button 
                       variant="contained" 
-                      color="textDark" 
                       sx={{
                         width: '49%',
                         fontSize: '15px',
                         borderRadius: '20px',
                         textTransform: 'none',
                         color: 'white',
-                        marginTop: '20px'
+                        marginTop: '20px',
+                        background:theme.palette.primary.main,
                       }}
                     >
                       Iphone o Ipad
@@ -133,12 +133,11 @@ export const FirstSection = () => {
             <SectionCard 
             title={t("GETMESSENGER_FIRSTSECTION3")} 
             image={Smessengerasset9}  
-            imageHeight='300px'
-            imageMarginBottom='-70px'          
+            imageHeight='100%'
+            imageMarginBottom='0px'       
             >
               <Button 
                 variant="contained" 
-                color="textDark" 
                 sx={{
                   width: "100%",
                   fontSize: "15px",
@@ -147,6 +146,7 @@ export const FirstSection = () => {
                   color: "white",
                   marginTop: "20px",
                   marginBottom: "20px",
+                  background:theme.palette.primary.main,
                 }}
               >
                 {t("GETMESSENGER_FIRSTSECTION4")}

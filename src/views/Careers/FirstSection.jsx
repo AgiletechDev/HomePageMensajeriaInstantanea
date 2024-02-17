@@ -1,38 +1,46 @@
-import { Box, Typography } from "@mui/material";
-import ciudad from "../../assets/images/Smessengerasset6.png";
-import iconCarrers from "../../assets/images/iconCarrers.png";
+import { Box, Typography, useTheme } from "@mui/material";
+import ciudad from "../../assets/images/pag4/banner1.png";
+import pers from "../../assets/images/pag4/personaje1.png";
+import iconCarrers1 from "../../assets/images/pag4/icono 1.png";
+import iconCarrers2 from "../../assets/images/pag4/icono 2.png";
+import iconCarrers3 from "../../assets/images/pag4/icono 3.png";
+import iconCarrers4 from "../../assets/images/pag4/icono 4.png";
+import iconCarrers5 from "../../assets/images/pag4/icono 5.png";
+import iconCarrers6 from "../../assets/images/pag4/icono 6.png";
+
 import { useTranslation } from 'react-i18next'
 
-const ContainerSection = ({ image, title, paragraph, marginLeft }) => (
-  <Box
-    sx={{
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      width: "400px",
-      marginLeft: marginLeft || "0",
-    }}
-  >
-    <img src={image} alt="" style={{ height: "50px", marginBottom: "20px" }} />
-    <Typography
-      variant="h5"
-      color="red"
-      fontWeight="600"
-      marginBottom="20px"
-      sx={{ maxWidth: "300px", textAlign: "center" }}
-    >
-      {title}
-    </Typography>
-    <Typography textAlign="center" sx={{ maxWidth: "250px" }}>
-      {paragraph}
-    </Typography>
-  </Box>
-);
+
 
 const FirstSection = () => {
   
   const { t } = useTranslation();
-
+  const theme = useTheme();
+  const ContainerSection = ({ image, title, paragraph, marginLeft }) => (
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        width: "400px",
+        marginLeft: marginLeft || "0",
+      }}
+    >
+      <img src={image} alt="" style={{ height: "80px", marginBottom: "20px" }} />
+      <Typography
+        variant="h5"
+        color={theme.palette.primary.main}
+        fontWeight="600"
+        marginBottom="20px"
+        sx={{ maxWidth: "300px", textAlign: "center" }}
+      >
+        {title}
+      </Typography>
+      <Typography textAlign="center" sx={{ maxWidth: "250px" }}>
+        {paragraph}
+      </Typography>
+    </Box>
+  );
   return (
     <>
       <Box
@@ -43,6 +51,7 @@ const FirstSection = () => {
           backgroundSize: "cover",
         }}
       >
+        <img src={pers} style={{position:'absolute', zIndex:'1', width:'40%', left:'50%'}}/>
         <Box
           sx={{
             position: "absolute",
@@ -90,20 +99,20 @@ const FirstSection = () => {
           }}
         >
           <ContainerSection
-            image={iconCarrers}
+            image={iconCarrers1}
             title={t("CAREERS_FIRSTSECTION3")}
             paragraph={t("CAREERS_FIRSTSECTION4")}
           />
 
           <ContainerSection
-            image={iconCarrers}
+            image={iconCarrers2}
             title={t("CAREERS_FIRSTSECTION5")}
             paragraph={t("CAREERS_FIRSTSECTION6")}
             marginLeft="20px"
           />
 
           <ContainerSection
-            image={iconCarrers}
+            image={iconCarrers3}
             title={t("CAREERS_FIRSTSECTION7")}
             paragraph={t("CAREERS_FIRSTSECTION8")}
             marginLeft="20px"
@@ -119,20 +128,20 @@ const FirstSection = () => {
           }}
         >
           <ContainerSection
-            image={iconCarrers}
+            image={iconCarrers4}
             title={t("CAREERS_FIRSTSECTION9")}
             paragraph={t("CAREERS_FIRSTSECTION10")}
           />
 
           <ContainerSection
-            image={iconCarrers}
+            image={iconCarrers5}
             title={t("CAREERS_FIRSTSECTION11")}
             paragraph={t("CAREERS_FIRSTSECTION12")}
             marginLeft="20px"
           />
 
           <ContainerSection
-            image={iconCarrers}
+            image={iconCarrers6}
             title={t("CAREERS_FIRSTSECTION13")}
             paragraph={t("CAREERS_FIRSTSECTION14")}
             marginLeft="20px"
@@ -169,27 +178,27 @@ const FirstSection = () => {
               <tr style={{ borderBottom: "1px solid #ccc" }}>
                 <td>Product Designer</td>
                 <td>Remote (US Timezones)</td>
-                <td style={{ color: "red" }}>View Role</td>
+                <td style={{ color: theme.palette.primary.main}}>View Role</td>
               </tr>
               <tr style={{ borderBottom: "1px solid #ccc" }}>
                 <td>Android Engineer</td>
                 <td>Remote (US Timezones)</td>
-                <td style={{ color: "red" }}>View Role</td>
+                <td style={{ color: theme.palette.primary.main}}>View Role</td>
               </tr>
               <tr style={{ borderBottom: "1px solid #ccc" }}>
                 <td>iOS Engineer</td>
                 <td>Remote (US Timezones)</td>
-                <td style={{ color: "red" }}>View Role</td>
+                <td style={{ color:theme.palette.primary.main }}>View Role</td>
               </tr>
               <tr style={{ borderBottom: "1px solid #ccc" }}>
                 <td>RTC (Calling) Engineer</td>
                 <td>Remote (US Timezones)</td>
-                <td style={{ color: "red" }}>View Role</td>
+                <td style={{ color: theme.palette.primary.main}}>View Role</td>
               </tr>
               <tr>
                 <td>Server (Backend Spam) Engineer</td>
                 <td>Remote (US Timezones)</td>
-                <td style={{ color: "red" }}>View Role</td>
+                <td style={{ color: theme.palette.primary.main}}>View Role</td>
               </tr>
             </tbody>
           </table>

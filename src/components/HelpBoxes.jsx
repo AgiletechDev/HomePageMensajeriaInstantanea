@@ -10,7 +10,7 @@ const HelpBoxes = () => {
       alignItems: "center",
      
       gap: "1em",
-      backgroundColor: theme.palette.secondary.second,
+      backgroundColor: '#b0dc9c',
       borderRadius: "50px 50px 0px 0",
       zIndex: "1",
       padding: "3em",

@@ -4,7 +4,7 @@ export const theme = createTheme({
     palette: {
       primary: {
         gradient: 'linear-gradient(83deg, rgba(119,55,142,1) 0%, rgba(84,85,154,1) 50%, rgba(46,119,167,1) 100%)',
-        main: '#d8222c',
+        main: '#55aa2d',
         second:'#403c3c',
       },
       secondary: {

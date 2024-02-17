@@ -9,6 +9,8 @@ import {
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import HelpBoxes from "../../components/HelpBoxes";
+import img1 from "../../assets/images/pag7/recurso 1.png";
+import img2 from "../../assets/images/pag7/recurso 2.png";
 
 const FirstSection = () => {
   const theme = useTheme();
@@ -84,13 +86,15 @@ const FirstSection = () => {
           padding: "5em",
         }}
       >
+        <img src={img1} style={{position:'absolute', zIndex:'-1', left:'2%', width:'25%'}}/>
+        <img src={img2} style={{position:'absolute', zIndex:'-1', left:'75%', width:'25%'}}/>
         <Box
           sx={{
             display: "flex",
             flexDirection: "column",
             gap: "30px",
-            maxWidth: "600px",
-            width: "600px",
+            maxWidth: "550px",
+            width: "550px",
           }}
         >
           <Typography
@@ -223,7 +227,7 @@ const FirstSection = () => {
             sx={{
               background: theme.palette.textDark.main,
               textAlign: 'center',
-              width:'620px',
+                     width: "570px",
               mx: 'auto',
               borderRadius: "10px",
               color:theme.palette.textLight.main,

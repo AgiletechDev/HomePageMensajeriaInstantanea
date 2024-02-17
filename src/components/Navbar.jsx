@@ -14,7 +14,7 @@ import {
 } from "@mui/material";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { router } from "../routers/router";
-import logo from "../assets/images/logo1.png";
+import logo from "../assets/icons/logonav.png";
 import { useTheme } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useTranslation } from "react-i18next";
@@ -94,7 +94,7 @@ const Navbar = () => {
               display: "flex",
               alignItems: "center",
               padding: "0",
-              background: theme.palette.primary.second,
+              background: theme.palette.primary.main,
               backdropFilter: "blur(18px)",
               position: "relative",
               gap: "20px",
@@ -132,13 +132,13 @@ const Navbar = () => {
             style: {
               right: 0,
               width: "250px",
-              background: theme.palette.primary.gradient,
+              background: theme.palette.primary.main,
             },
           }}
         >
           <Box
             sx={{
-              background: theme.palette.primary.gradient,
+              background: theme.palette.primary.main,
               padding: "20px",
               textAlign: "center",
               color: "white",
@@ -179,7 +179,7 @@ const Navbar = () => {
   return (
     <AppBar
       position="fixed"
-      style={{ background: theme.palette.primary.second }}
+      style={{ background: theme.palette.primary.main }}
     >
       <Toolbar
         style={{

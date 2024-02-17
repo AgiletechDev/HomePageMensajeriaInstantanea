@@ -1,6 +1,6 @@
 import { Box, Typography, Divider, useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import imgLogo from "../assets/images/LOGO.png";
+import imgLogo from "../assets/icons/logofooter.png";
 import { Link } from "react-router-dom";
 import footerbg from "../assets/images/footerbg.png";
 import { useTranslation } from "react-i18next";
@@ -13,8 +13,8 @@ export const Footer = () => {
   return (
     <Box
       sx={{
-        background: theme.palette.secondary.main,
-        paddingTop: isMobile ? "1em" : "10em",
+        background: theme.palette.primary.main,
+        paddingTop: isMobile ? "1em" : "5em",
         height: isMobile ? "0" : "100%",
         mb: "-20px",
       }}
@@ -36,10 +36,12 @@ export const Footer = () => {
         <Box
           sx={{
             display: "flex",
-            gap: "100px",
+            gap: "50px",
             flexDirection: isMobile ? "column" : "row",
+            maxWidth: "1100px",
           }}
         >
+          <img src={imgLogo} style={{width:'20%'}}/>
           <Box sx={{ display: "flex", flexDirection: "column", gap: "5px" }}>
             <Link
               to="/blog"
@@ -63,7 +65,9 @@ export const Footer = () => {
             </Link>
           </Box>
           <Box sx={{ display: "flex", flexDirection: "column", gap: "5px" }}>
-            <Typography variant="h6" mb="10px">Organization</Typography>
+            <Typography variant="h6" mb="10px">
+              Organization
+            </Typography>
             <Link
               to="/aplicaciones"
               style={{
@@ -118,7 +122,9 @@ export const Footer = () => {
             </Link>
           </Box>
           <Box sx={{ display: "flex", flexDirection: "column", gap: "5px" }}>
-            <Typography variant="h6" mb="10px">Download</Typography>
+            <Typography variant="h6" mb="10px">
+              Download
+            </Typography>
             <Link
               to="/sobrenosotros"
               style={{
@@ -169,7 +175,9 @@ export const Footer = () => {
             </Typography>
           </Box>
           <Box sx={{ display: "flex", flexDirection: "column", gap: "5px" }}>
-            <Typography variant="h6" mb="10px">Social</Typography>
+            <Typography variant="h6" mb="10px">
+              Social
+            </Typography>
             <Link
               to="/sobrenosotros"
               style={{
@@ -181,7 +189,7 @@ export const Footer = () => {
                 sx={{ color: theme.palette.textLight.main }}
                 fontWeight="bold"
               >
-               GitHub
+                GitHub
               </Typography>
             </Link>
 
@@ -207,7 +215,9 @@ export const Footer = () => {
             </Link>
           </Box>
           <Box sx={{ display: "flex", flexDirection: "column", gap: "5px" }}>
-            <Typography variant="h6" mb="10px">Help</Typography>
+            <Typography variant="h6" mb="10px">
+              Help
+            </Typography>
             <Link
               to="/sobrenosotros"
               style={{

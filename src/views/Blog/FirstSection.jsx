@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-
+import pers from "../../assets/images/pag4/personaje1.png";
 
 const FirstSection = () => {
   return (
@@ -14,10 +14,10 @@ const FirstSection = () => {
     >
       <Box
         sx={{
-          maxWidth: "700px",
+          maxWidth: "600px",
           margin: "auto",
           mt: "8em",
-          backgroundColor: "#ffffff",
+          backgroundColor: "#b0dc9c",
           padding: "3em",
           borderRadius: "20px",
         }}
@@ -81,10 +81,10 @@ const FirstSection = () => {
       </Box>
       <Box
         sx={{
-          maxWidth: "700px",
+          maxWidth: "600px",
           margin: "auto",
           mb: "5em",
-          backgroundColor: "#ffffff",
+          backgroundColor: "#b0dc9c",
           padding: "3em",
           borderRadius: "20px",
         }}
@@ -149,6 +149,7 @@ const FirstSection = () => {
           </Box>
         </Box>
       </Box>
+      <img src={pers} style={{position:'absolute', top:'273%', left:'68%', width:'32%'}}/>
     </Box>
   );
 };

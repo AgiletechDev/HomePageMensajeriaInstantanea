@@ -1,13 +1,19 @@
-import { Box, Typography } from '@mui/material'
-import ciudad from '../../assets/images/Smessengerasset6.png'
-import pet from '../../assets/images/Smessengerasset1.png'
+import { Box, Typography, useTheme } from '@mui/material'
+import ciudad from '../../assets/images/pag3/banner.png'
+import pet from '../../assets/images/pag3/personaje1.png'
 import { useTranslation } from 'react-i18next'
 
 
 
+
+export const FirstSection = () => {
+
+  const { t } = useTranslation();
+const theme = useTheme();
+
 const Description = ({title, paragraph})=>(
     <Box marginTop='20px'>
-        <Typography variant='h6' fontWeight='600'  color='red'>
+        <Typography color={theme.palette.primary.main} variant='h6' fontWeight='600'>
             {title}
         </Typography>
         <Typography marginTop='20px'>
@@ -16,10 +22,7 @@ const Description = ({title, paragraph})=>(
     </Box>
 )
 
-export const FirstSection = () => {
 
-  const { t } = useTranslation();
-  
   const data = [
     {
         title: t("DEVELOPERS_USERS5"),
@@ -51,7 +54,7 @@ export const FirstSection = () => {
             }}
          
             >
-                  <img src={pet} style={{zIndex:'2',position: 'absolute', left: '120%',width:'120%', top:'-150%'}}/>
+                  <img src={pet} style={{zIndex:'2',position: 'absolute', left: '120%',width:'100%', top:'-150%'}}/>
                 <Typography variant="h3" color='white' style={{
                     fontWeight: '600',
                     marginBottom: '10px'
@@ -83,10 +86,10 @@ export const FirstSection = () => {
                 width: '50%'
             }}
             >
-                <Typography variant='h4' fontWeight='600' marginTop='20px'>
+                <Typography variant='h4' color={theme.palette.primary.main} fontWeight='600' marginTop='20px'>
                     {t("DEVELOPERS_USERS3")}
                 </Typography>
-                <Typography marginTop='20px' fontWeight='600'>
+                <Typography  marginTop='20px' fontWeight='600'>
                     {t("DEVELOPERS_USERS4")}
                 </Typography>
 
@@ -97,11 +100,11 @@ export const FirstSection = () => {
                 }
 
 
-                <Typography variant='h4' fontWeight='600' marginTop='20px'>
+                <Typography variant='h4' color={theme.palette.primary.main} fontWeight='600' marginTop='20px'>
                     {t("DEVELOPERS_USERS11")}
                 </Typography>
 
-                <Typography variant='h6' fontWeight='600'  color='red' marginTop='10px'>
+                <Typography variant='h6' color={theme.palette.primary.main} fontWeight='600'  marginTop='10px'>
                     {t("DEVELOPERS_USERS12")}
                 </Typography>
 
