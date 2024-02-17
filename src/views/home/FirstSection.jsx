@@ -1,4 +1,10 @@
-import { Box, Button, Typography, useTheme } from "@mui/material";
+import {
+  Box,
+  Button,
+  Typography,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
 import Smessengerasset2 from "../../assets/images/Smessengerasset2.png";
 import Smessengerasset3 from "../../assets/images/Smessengerasset3.png";
 import phone3 from "../../assets/images/pag1/vista 1.png";
@@ -8,8 +14,8 @@ import { useTranslation } from "react-i18next";
 
 export const FirstSection = () => {
   const { t } = useTranslation();
-
   const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <>
@@ -18,53 +24,61 @@ export const FirstSection = () => {
           backgroundColor: "rgba(85,170,45,0.5)",
           display: "flex",
           alignItems: "center",
-          height: "90vh",
+          flexDirecttion: isMobile ? 'column' : 'row',
+          height: isMobile ? "100%" : "90vh",
           width: "100%",
-          marginTop: "40px",
+          marginTop: isMobile ? "6em" : "40px",
         }}
       >
-        <img
-          src={Smessengerasset3}
-          alt=""
-          style={{
-            position: "absolute",
-            left: "5%",
-            height: "80%",
-            zIndex: "-1",
-          }}
-        />
+        {!isMobile && (
+          <img
+            src={Smessengerasset3}
+            alt=""
+            style={{
+              position: "absolute",
+              left: "5%",
+              height: "80%",
+              zIndex: "-1",
+            }}
+          />
+        )}
 
-        <img
-          src={PANELA}
-          alt=""
-          style={{
-            position: "absolute",
-            right: "0",
-            height: "100%",
-            zIndex: "0",
-          }}
-        />
+        {!isMobile && (
+          <img
+            src={PANELA}
+            alt=""
+            style={{
+              position: "absolute",
+              right: "0",
+              height: "100%",
+              zIndex: "0",
+            }}
+          />
+        )}
 
-        <img
-          src={phone3}
-          alt=""
-          style={{
-            width:'40%',
-            position: "absolute",
-            right: "10%",
-            zIndex: "1",
-            top: "-10%",
-            
-          }}
-        />
+        {!isMobile && (
+          <img
+            src={phone3}
+            alt=""
+            style={{
+              width: "40%",
+              position: "absolute",
+              right: "10%",
+              zIndex: "1",
+              top: "-10%",
+            }}
+          />
+        )}
 
         <Box
           sx={{
             display: "flex",
             flexDirection: "column",
-            width: "350px",
+            alignItems: isMobile ? "center" : "start",
+            width: isMobile ? "100%" : "350px",
             zIndex: "2",
-            marginLeft: "11%",
+            marginLeft: isMobile ? "0" : "11%",
+            padding: "1em",
           }}
         >
           <Typography
@@ -73,7 +87,8 @@ export const FirstSection = () => {
             sx={{
               fontSize: "45px",
               fontWeight: "600",
-              width: "300px",
+              width: isMobile ? "100%" : "300px",
+              textAlign: isMobile ? "center" : "left",
             }}
           >
             {t("HOME1_FIRSTSECTION")}
@@ -81,7 +96,7 @@ export const FirstSection = () => {
 
           <Typography
             color="white"
-            textAlign="justify"
+            textAlign={isMobile ? "center" : "justify"}
             marginTop="15px"
             marginBottom="15px"
           >
@@ -101,9 +116,17 @@ export const FirstSection = () => {
           >
             {t("HOME1_BUTTON")}
           </Button>
+          {isMobile && (
+            <img
+              src={phone3}
+              alt=""
+              style={{
+                width: "90%",
+                zIndex: "1",
+              }}
+            />
+          )}
         </Box>
-
-        <img src="" alt="" />
       </Box>
 
       <Box
@@ -113,10 +136,10 @@ export const FirstSection = () => {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          height: "800px",
+          height: isMobile ? "100%" : "800px",
           width: "100%",
           borderTopLeftRadius: "50px",
-          marginTop: "-50px",
+          marginTop: isMobile ? 0 : "-50px",
         }}
       >
         <Box
@@ -125,7 +148,8 @@ export const FirstSection = () => {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            width: "1100px",
+            width: isMobile ? "100%" : "1100px",
+            mt: isMobile ? '1em' : '0'
           }}
         >
           <Typography
@@ -133,45 +157,76 @@ export const FirstSection = () => {
             sx={{
               fontSize: "35px",
               fontWeight: "600",
+              textAlign: isMobile ? "center" : "justify",
             }}
           >
             {t("HOME1_FIRSTSECTION3")}
           </Typography>
 
-          <Typography textAlign="justify" marginTop="25px" marginBottom="25px">
+          <Typography
+            textAlign={isMobile ? "center" : "justify"}
+            marginTop="25px"
+            marginBottom="25px"
+          >
             {t("HOME1_FIRSTSECTION4")}
           </Typography>
 
           <Box
             sx={{
               display: "flex",
-              justifyContent: "space-beetween",
+              flexDirection: isMobile ? "column" : "row",
+              justifyContent: isMobile ? "center" : "space-beetween",
+              alignItems: isMobile ? "center" : "0",
               marginTop: "20px",
               gap: "80px",
+              padding: isMobile ? "1em" : "0",
             }}
           >
             <Box
               sx={{
                 display: "flex",
                 flexDirection: "column",
-                marginRight: "40px",
+                marginRight: isMobile ? "0" : "40px",
+                
               }}
             >
-              <Typography fontWeight="600" fontSize="25px" width="300px">
+              <Typography
+                fontWeight="600"
+                fontSize={isMobile ? "35px" : "45px"}
+                width={isMobile ? "100%" : "300px"}
+                textAlign={isMobile ? "center" : "justify"}
+              >
                 {t("HOME1_FIRSTSECTION5")}
               </Typography>
-              <Typography width="350px">{t("HOME1_FIRSTSECTION6")}</Typography>
+              <Typography
+                width={isMobile ? "100%" : "350px"}
+                textAlign={isMobile ? "center" : "justify"}
+              >
+                {t("HOME1_FIRSTSECTION6")}
+              </Typography>
             </Box>
             <img
               src={Smessengerasset2}
               alt=""
-              style={{ height: "450px", marginLeft: "20px",zIndex:'1' }}
+              style={{
+                height: isMobile ? "100%" : "450px",
+                width: isMobile ? "80%" : "100%",
+                marginLeft: isMobile ? "0" : "20px",
+                zIndex: "1",
+              }}
             />
-            <img
-              src={greenBox}
-              alt=""
-              style={{ position:'absolute', zIndex:'0', height: "600px",left:'41%'}}
-            />
+            {!isMobile && (
+              <img
+                src={greenBox}
+                alt=""
+                style={{
+                  position: "absolute",
+                  zIndex: "0",
+                  height: "600px",
+                  left: "41%",
+                }}
+              />
+            )}
           </Box>
         </Box>
       </Box>

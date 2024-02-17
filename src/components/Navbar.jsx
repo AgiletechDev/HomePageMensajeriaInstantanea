@@ -46,13 +46,12 @@ const Navbar = () => {
 
   const menuItems = [
     { to: "/", labelKey: "" },
-    { to: "/aplicaciones", labelKey: "DRAWER1" },
-    { to: "/donar", labelKey: "DRAWER2" },
-    { to: "/verificacion", labelKey: "DRAWER3" },
-    { to: "/blog", labelKey: "DRAWER4" },
-    { to: "/hojaderuta", labelKey: "DRAWER5" },
-    { to: "/empleo", labelKey: "DRAWER6" },
-    { to: "/sobrenosotros", labelKey: "DRAWER7" },
+    { to: "/getmessenger", labelKey: "DRAWER1" },
+    { to: "/help", labelKey: "DRAWER2" },
+    { to: "/blog", labelKey: "DRAWER3" },
+    { to: "/developers", labelKey: "DRAWER4" },
+    { to: "/careers", labelKey: "DRAWER5" },
+    { to: "/donate", labelKey: "DRAWER6" },
   ];
 
   const [resourcesMenuAnchor, setResourcesMenuAnchor] = useState(null);
@@ -113,7 +112,7 @@ const Navbar = () => {
                 src={logo}
                 alt="logo"
                 style={{
-                  width: "80%",
+                  width: "",
                 }}
               />
             </Link>
@@ -154,7 +153,7 @@ const Navbar = () => {
                 src={logo}
                 alt="logo"
                 style={{
-                  width: "100%",
+            
                   marginBottom: "20px",
                 }}
               />
@@ -183,7 +182,7 @@ const Navbar = () => {
     >
       <Toolbar
         style={{
-          width: 1140,
+          width: isMobile ? '100%' :1140,
           margin: "0 auto",
           display: "flex",
           justifyContent: "space-between",
@@ -199,18 +198,20 @@ const Navbar = () => {
           </div>
         </Link>
         <div style={{ display: "flex", alignItems: "center" }}>
-          {router.routes[0].children.map((childRoute) => (
-            <React.Fragment key={childRoute.path}>
-              <Button
-                component={Link}
-                to={childRoute.path}
-                color="inherit"
-                style={{ textTransform: "capitalize", color: "white" }}
-              >
-                {childRoute.path.substring(1)}
-              </Button>
-            </React.Fragment>
-          ))}
+        {router.routes[0].children.map((childRoute, index) => (
+  <React.Fragment key={childRoute.path}>
+    {index !== 0 && (
+      <Button
+        component={Link}
+        to={childRoute.path}
+        color="inherit"
+        style={{ textTransform: "capitalize", color: "white" }}
+      >
+        {t(`NAVBARTITLE${index}`)}
+      </Button>
+    )}
+  </React.Fragment>
+))}
           <Button
             sx={{ marginLeft: isMobile ? "-28px" : "-12px" }}
             onClick={() => handleLanguage()}

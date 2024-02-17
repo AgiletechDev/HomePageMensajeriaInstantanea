@@ -6,16 +6,18 @@ import {
   useTheme,
   TextareaAutosize,
   Button,
+  useMediaQuery,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import HelpBoxes from "../../components/HelpBoxes";
 import img1 from "../../assets/images/pag7/recurso 1.png";
 import img2 from "../../assets/images/pag7/recurso 2.png";
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from "react-i18next";
 
 const FirstSection = () => {
   const theme = useTheme();
   const { t } = useTranslation();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <Box
@@ -81,22 +83,41 @@ const FirstSection = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          justifyContent:'center',
+          justifyContent: "center",
           gap: "1em",
           backgroundColor: theme.palette.textLight.main,
           zIndex: "1",
-          padding: "5em",
+          padding: isMobile ? "3em" : "5em",
         }}
       >
-        <img src={img1} style={{position:'absolute', zIndex:'-1', left:'2%', width:'25%'}}/>
-        <img src={img2} style={{position:'absolute', zIndex:'-1', left:'75%', width:'25%'}}/>
+        <img
+          src={img1}
+          style={{
+            position: isMobile ? "relative" : "absolute",
+            zIndex: "-1",
+            left: "2%",
+            width: isMobile ? "80%" : "25%",
+          }}
+        />
+        {!isMobile && (
+          <img
+            src={img2}
+            style={{
+              position: isMobile ? "relative" : "absolute",
+              zIndex: "-1",
+              left: "75%",
+              width: "25%",
+            }}
+          />
+        )}
         <Box
           sx={{
             display: "flex",
             flexDirection: "column",
             gap: "30px",
-            maxWidth: "550px",
-            width: "550px",
+            maxWidth: isMobile ? "100%" : "550px",
+            width: isMobile ? "100%" : "550px",
+            mt: isMobile ? "2em" : "0",
           }}
         >
           <Typography
@@ -225,18 +246,27 @@ const FirstSection = () => {
             />
           </Box>
           <Button
-        
             sx={{
               background: theme.palette.textDark.main,
-              textAlign: 'center',
-                     width: "570px",
-              mx: 'auto',
+              textAlign: "center",
+              width: isMobile ? "100%" : "570px",
+              mx: "auto",
               borderRadius: "10px",
-              color:theme.palette.textLight.main,
+              color: theme.palette.textLight.main,
             }}
           >
             {t("HELP_USERS17")}
           </Button>
+          {isMobile && (
+            <img
+              src={img2}
+              style={{
+                position: isMobile ? "relative" : "absolute",
+                zIndex: "-1",
+                width: "100%",
+              }}
+            />
+          )}
         </Box>
       </Box>
     </Box>

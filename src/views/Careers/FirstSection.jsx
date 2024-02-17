@@ -1,4 +1,4 @@
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, Typography, useTheme, useMediaQuery } from "@mui/material";
 import ciudad from "../../assets/images/pag4/banner1.png";
 import pers from "../../assets/images/pag4/personaje1.png";
 import iconCarrers1 from "../../assets/images/pag4/icono 1.png";
@@ -16,17 +16,21 @@ const FirstSection = () => {
   
   const { t } = useTranslation();
   const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   const ContainerSection = ({ image, title, paragraph, marginLeft }) => (
     <Box
       sx={{
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        width: "400px",
+        width: isMobile ? '100%' : "400px",
         marginLeft: marginLeft || "0",
       }}
     >
+     
       <img src={image} alt="" style={{ height: "80px", marginBottom: "20px" }} />
+       
       <Typography
         variant="h5"
         color={theme.palette.primary.main}
@@ -45,19 +49,23 @@ const FirstSection = () => {
     <>
       <Box
         sx={{
-          height: "500px",
+          height: isMobile ? "100%" : "500px",
           width: "100%",
           background: `url(${ciudad})`,
           backgroundSize: "cover",
+          padding: isMobile && "8em 0em",
         }}
       >
+          {!isMobile && 
         <img src={pers} style={{position:'absolute', zIndex:'1', width:'40%', left:'50%'}}/>
+          }
         <Box
           sx={{
-            position: "absolute",
-            top: "200px",
-            left: "11%",
-            width: "560px",
+            position: isMobile ? "relative" : "absolute",
+            top: !isMobile && "200px",
+            left: !isMobile && "10%",
+            padding: "1em",
+            maxWidth:isMobile ? '100%' :'500px'
           }}
         >
           <Typography
@@ -79,11 +87,11 @@ const FirstSection = () => {
 
       <Box
         sx={{
-          height: "1050px",
+          height: isMobile ? "100%" : "1050px",
           backgroundColor: "white",
           borderTopRightRadius: "50px",
           marginTop: "-50px",
-          paddingX: "100px",
+          paddingX: isMobile ? '1em' :"100px",
           display: "flex",
           flexDirection: "column",
           mb:'8em'
@@ -96,6 +104,8 @@ const FirstSection = () => {
             marginTop: "100px",
             alignItems: "center",
             justifyContent: "center",
+            flexDirection: isMobile ? "column" : "row",
+            gap: isMobile ? '80px' :'0'
           }}
         >
           <ContainerSection
@@ -108,14 +118,14 @@ const FirstSection = () => {
             image={iconCarrers2}
             title={t("CAREERS_FIRSTSECTION5")}
             paragraph={t("CAREERS_FIRSTSECTION6")}
-            marginLeft="20px"
+            marginLeft={isMobile ? '0' :"20px"}
           />
 
           <ContainerSection
             image={iconCarrers3}
             title={t("CAREERS_FIRSTSECTION7")}
             paragraph={t("CAREERS_FIRSTSECTION8")}
-            marginLeft="20px"
+            marginLeft={isMobile ? '0' :"20px"}
           />
         </Box>
 
@@ -125,6 +135,8 @@ const FirstSection = () => {
             marginTop: "80px",
             alignItems: "center",
             justifyContent: "center",
+            flexDirection: isMobile ? "column" : "row",
+            gap: isMobile ? '80px' :'0'
           }}
         >
           <ContainerSection
@@ -137,14 +149,14 @@ const FirstSection = () => {
             image={iconCarrers5}
             title={t("CAREERS_FIRSTSECTION11")}
             paragraph={t("CAREERS_FIRSTSECTION12")}
-            marginLeft="20px"
+            marginLeft={isMobile ? '0' :"20px"}
           />
 
           <ContainerSection
             image={iconCarrers6}
             title={t("CAREERS_FIRSTSECTION13")}
             paragraph={t("CAREERS_FIRSTSECTION14")}
-            marginLeft="20px"
+            marginLeft={isMobile ? '0' :"20px"}
           />
         </Box>
 
@@ -154,7 +166,7 @@ const FirstSection = () => {
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-         
+            
           }}
         >
           <Typography
@@ -169,7 +181,7 @@ const FirstSection = () => {
             style={{
               borderCollapse: "collapse",
               width: "100%",
-              maxWidth: "1100px",
+              maxWidth:  isMobile ? '100%' :"1100px",
               marginTop: "50px",
               paddingBottom: "5em",
             }}

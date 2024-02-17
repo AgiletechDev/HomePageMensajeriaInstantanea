@@ -1,9 +1,11 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import pers from "../../assets/images/pag4/personaje1.png";
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from "react-i18next";
 
 const FirstSection = () => {
   const { t } = useTranslation();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <Box
@@ -13,15 +15,19 @@ const FirstSection = () => {
         margin: "auto",
         gap: "5em",
         backgroundColor: "#f6f6f6",
+        padding: "1em",
+        justyfContent: "center",
+        alignItems: "center",
       }}
     >
       <Box
         sx={{
-          maxWidth: "600px",
-          margin: "auto",
+          maxWidth: isMobile ? "100%" : "600px",
           mt: "8em",
+
+          mb: "1em",
           backgroundColor: "#b0dc9c",
-          padding: "3em",
+          padding: isMobile ? "1em" : "3em",
           borderRadius: "20px",
         }}
       >
@@ -46,9 +52,7 @@ const FirstSection = () => {
               mt: "50px",
             }}
           >
-            <Typography variant="h6">
-              {t("BLOG_USERS2")}
-            </Typography>
+            <Typography variant="h6">{t("BLOG_USERS2")}</Typography>
           </Box>
           <Box
             sx={{
@@ -58,19 +62,20 @@ const FirstSection = () => {
               mt: "50px",
             }}
           >
-            <Typography variant="h6">
-              {t("BLOG_USERS3")}
-            </Typography>
+            <Typography variant="h6">{t("BLOG_USERS3")}</Typography>
           </Box>
         </Box>
       </Box>
+      {isMobile && (
+        <img src={pers} style={{ position: "relative", width: "100%" }} />
+      )}
       <Box
         sx={{
-          maxWidth: "600px",
-          margin: "auto",
+          maxWidth: isMobile ? "100%" : "600px",
+
           mb: "5em",
           backgroundColor: "#b0dc9c",
-          padding: "3em",
+          padding: isMobile ? "1em" : "3em",
           borderRadius: "20px",
         }}
       >
@@ -95,9 +100,7 @@ const FirstSection = () => {
               mt: "50px",
             }}
           >
-            <Typography variant="h6">
-              {t("BLOG_USERS5")}
-            </Typography>
+            <Typography variant="h6">{t("BLOG_USERS5")}</Typography>
           </Box>
           <Box
             sx={{
@@ -107,13 +110,21 @@ const FirstSection = () => {
               mt: "50px",
             }}
           >
-            <Typography variant="h6">
-              {t("BLOG_USERS6")}
-            </Typography>
+            <Typography variant="h6">{t("BLOG_USERS6")}</Typography>
           </Box>
         </Box>
       </Box>
-      <img src={pers} style={{position:'absolute', top:'273%', left:'68%', width:'32%'}}/>
+      {!isMobile && (
+        <img
+          src={pers}
+          style={{
+            position: "absolute",
+            top: "273%",
+            left: "68%",
+            width: "32%",
+          }}
+        />
+      )}
     </Box>
   );
 };
