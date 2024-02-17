@@ -165,5 +165,36 @@
     "DEVELOPERS_USERS13": "Double Ratchet",
     "DEVELOPERS_USERS14": "This document describes the Double Ratchet algorithm, which is used by two parties to exchange encrypted messages based on a shared secret key. The parties derive new keys for every Double Ratchet message so that earlier keys cannot be calculated  from later ones. The parties also send Diffie-Hellman public values attached to their  messages. The results of Diffie-Hellman calculations are mixed into the derived keys  so that later keys cannot be calculated from earlier ones. These properties give some  protection to earlier or later encrypted messages in case of a compromise of a party s  keys.",
     "DEVELOPERS_USERS15": "Sesame",
-    "DEVELOPERS_USERS16": "This document describes the Sesame algorithm for managing message encryption sessions in an asynchronous and multi-device setting."
+    "DEVELOPERS_USERS16": "This document describes the Sesame algorithm for managing message encryption sessions in an asynchronous and multi-device setting.",
+
+
+    "HELP_USERS1": "How can we help you?",
+    "HELP_USERS2": "Search",
+    "HELP_USERS3": "Starting",
+    "HELP_USERS4": "Understand the basics of Smessenger on Android, iOS and Desktop",
+    "HELP_USERS5": "Characteristics",
+    "HELP_USERS6": "Explore all the features of private messaging",
+    "HELP_USERS7": "Security",
+    "HELP_USERS8": "This section contains common questions about the security and reliability of technology in applications",
+    "HELP_USERS9": "Problem solving",
+    "HELP_USERS10": "General",
+    "HELP_USERS11": "Send a solicitude",
+    "HELP_USERS12": "Email *",
+    "HELP_USERS13": "Re-enter your email address *",
+    "HELP_USERS14": "What is your question? *",
+    "HELP_USERS15": "What platform is it for? *",
+    "HELP_USERS16": "Description",
+    "HELP_USERS17": "Send",
+    
+    "BLOG_USERS1": "Help people in Iran reconnect to Smessenger - a request to our community",
+    "BLOG_USERS2": "For many years, the Smessenger app on Android has supported sending and receiving plaintext SMS and MMS messages in addition to Smessenger messages. SMS and MMS are standardized communication protocols that allow mobile devices to send and transmit messages, and most people picking up their phone to text or share memes don&apos;t really think about them. To give some context, when we started supporting SMS, Smessenger didn&apos;t exist yet. Our Android app was called TextSecure and the Smessenger encryption protocol was called Axolotl. Almost a decade has passed since then, and a lot has changed. Read more .",
+    "BLOG_USERS3": "Other Ways to Give Smessenger accepts donations of cryptocurrency, stock, and gifts from donor advised funds (DAFs). These donations are processed through The Giving Block. If you want to receive a tax deduction in the US for the fair market value of your donation, you can provide an email address to receive a tax receipt. The Giving Block also supports anonymous donations of cryptocurrency and from DAFs. Note: You will only receive a badge in your Smessenger account if you donate inside the Smessenger app.",
+    "BLOG_USERS4": "Removing SMS support from Smessenger Android (soon)",
+    "BLOG_USERS5": "Smessenger is built for you; not your data and not for profit. We pursue our mission with your support - to protect free expression and enable secure global communication through open source privacy technology. Private messaging. No ads, no trackers, no surveillance. Your donations help pay for the development and maintenance of Smessenger, including the servers and bandwidth required to make Smessenger available to the millions of people all over the world who depend on it. If you provide an email with your donation, you will receive an email confirmation for your tax records. Smessenger Technology Foundation is an independent nonprofit charity and tax-exempt under section 501c3 of the US Internal Revenue Code. Our Federal Tax ID Number is 82- 4506840. Note: You will only receive a badge in your Smessenger account if you donate inside the Smessenger app.",
+    "BLOG_USERS6": "Other Ways to Give Smessenger accepts donations of cryptocurrency, stock, and gifts from donor advised funds (DAFs). These donations are processed through The Giving Block. If you want to receive a tax deduction in the US for the fair market value of your donation, you can provide an email address to receive a tax receipt. The Giving Block also supports anonymous donations of cryptocurrency and from DAFs. Note: You will only receive a badge in your Smessenger account if you donate inside the Smessenger app.",
+
+    "DONATE_FIRSTSECTION1": "Donate to Smessenger",
+    "DONATE_FIRSTSECTION2": "Smessenger is built for you; not your data and not for profit. We pursue our mission with your support - to protect free expression and enable secure global communication through open source privacy technology. Private messaging. No ads, no trackers, no surveillance. Your donations help pay for the development and maintenance of Smessenger, including the servers and bandwidth required to make Smessenger available to the millions of people all over the world who depend on it. If you provide an email with your donation, you will receive an email confirmation for your tax records. Smessenger Technology Foundation is an independent nonprofit charity and tax-exempt under section 501c3 of the US Internal Revenue Code. Our Federal Tax ID Number is 82- 4506840. Note: You will only receive a badge in your Smessenger account if you donate inside the Smessenger app.",
+    "DONATE_FIRSTSECTION3": "Other Ways to Give Smessenger accepts donations of cryptocurrency, stock, and gifts from donor advised funds (DAFs). These donations are processed through The Giving Block. If you want to receive a tax deduction in the US for the fair market value of your donation, you can provide an email address to receive a tax receipt. The Giving Block also supports anonymous donations of cryptocurrency and from DAFs. Note: You will only receive a badge in your Smessenger account if you donate inside the Smessenger app."
+   
 }

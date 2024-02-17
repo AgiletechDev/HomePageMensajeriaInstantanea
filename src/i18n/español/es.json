@@ -168,5 +168,36 @@
     "DEVELOPERS_USERS13": "Double Ratchet",
     "DEVELOPERS_USERS14": "Este documento describe el algoritmo Double Ratchet, que utilizan dos partes para intercambiar mensajes cifrados basados en una clave secreta compartida. Las partes obtienen nuevas claves para cada mensaje de Double Ratchet, de modo que las claves anteriores no se pueden calcular a partir de las posteriores. Los partidos también envían valores públicos de Diffie-Hellman adjuntos a sus mensajes. Los resultados de los cálculos de Diffie-Hellman se mezclan en las claves derivadas para que las claves posteriores no puedan calcularse a partir de las anteriores. Estas propiedades brindan cierta protección a mensajes cifrados anteriores o posteriores en caso de que las claves de una parte se vean comprometidas.",
     "DEVELOPERS_USERS15": "Sesame",
-    "DEVELOPERS_USERS16": "Este documento describe el algoritmo de Sesame para administrar sesiones de cifrado de mensajes en una configuración asincrónica y multidispositivo."
+    "DEVELOPERS_USERS16": "Este documento describe el algoritmo de Sesame para administrar sesiones de cifrado de mensajes en una configuración asincrónica y multidispositivo.",
+
+    
+    "HELP_USERS1": "¿Cómo podemos ayudarte?",
+    "HELP_USERS2": "Buscar",
+    "HELP_USERS3": "Empezando",
+    "HELP_USERS4": "Comprende los conceptos básicos de Smessenger en Android, iOS y Desktop",
+    "HELP_USERS5": "Características",
+    "HELP_USERS6": "Explora todas las características de la mensajería privada",
+    "HELP_USERS7": "Seguridad",
+    "HELP_USERS8": "Esta sección contiene preguntas habituales sobre la seguridad y fiabilidad de la tecnología en las aplicaciones",
+    "HELP_USERS9": "Solución de problemas",
+    "HELP_USERS10": "General",
+    "HELP_USERS11": "Enviar una solicitud",
+    "HELP_USERS12": "Correo Eléctronico *",
+    "HELP_USERS13": "Vuelve a introducir tu dirección de correo electrónico *",
+    "HELP_USERS14": "¿Cuál es tu consulta? *",
+    "HELP_USERS15": "¿Para qué plataforma es? *",
+    "HELP_USERS16": "Descripción",
+    "HELP_USERS17": "Enviar",
+
+    "BLOG_USERS1": "Ayude a las personas en Irán a volver a conectarse a Smessenger: una solicitud para nuestra comunidad",
+    "BLOG_USERS2": "Durante muchos años, la aplicación Smessenger en Android ha admitido el envío y la recepción de mensajes SMS y MMS de texto sin formato, además de mensajes Smessenger. SMS y MMS son protocolos de comunicación estandarizados que permiten a los dispositivos móviles enviar y transmitir mensajes, y la mayoría de las personas que levantan su teléfono para enviar mensajes de texto o compartir memes realmente no piensan en ellos. Para dar un poco de contexto, cuando empezamos a admitir SMS, Smessenger aún no existía. Nuestra aplicación para Android se llamaba TextSecure y el protocolo de cifrado Smessenger se llamaba Axolotl. Ha pasado casi una década desde entonces y muchas cosas han cambiado. Leer más.",
+    "BLOG_USERS3": "Otras formas de donar Smessenger acepta donaciones de criptomonedas, acciones y obsequios de fondos asesorados por donantes (DAF). Estas donaciones se procesan a través de The Giving Block. Si desea recibir una deducción de impuestos en los EE. UU. por el valor justo de mercado de su donación, puede proporcionar una dirección de correo electrónico para recibir un recibo de impuestos. The Giving Block también admite donaciones anónimas de criptomonedas y de DAF. Nota: Solo recibirás una insignia en tu cuenta de Smessenger si realizas una donación dentro de la aplicación Smessenger.",
+    "BLOG_USERS4": "Eliminación de la compatibilidad con SMS de Smessenger Android (pronto)",
+    "BLOG_USERS5": "Smessenger está diseñado para usted; no tus datos y sin fines de lucro. Perseguimos nuestra misión con su apoyo: proteger la libertad de expresión y permitir una comunicación global segura a través de tecnología de privacidad de código abierto. Mensajería privada. Sin anuncios, sin rastreadores, sin vigilancia. Sus donaciones ayudan a pagar el desarrollo y mantenimiento de Smessenger, incluidos los servidores y el ancho de banda necesarios para que Smessenger esté disponible para millones de personas en todo el mundo que dependen de él. Si proporciona un correo electrónico con su donación, recibirá una confirmación por correo electrónico de sus registros de impuestos. Smessenger Technology Foundation es una organización benéfica independiente sin fines de lucro y está exenta de impuestos según la sección 501c3 del Código de Rentas Internas de EE. UU. Nuestro número de identificación fiscal federal es 82-4506840. Nota: solo recibirá una insignia en su cuenta de Smessenger si realiza una donación dentro de la aplicación Smessenger.",
+    "BLOG_USERS6": "Otras formas de donar Smessenger acepta donaciones de criptomonedas, acciones y obsequios de fondos asesorados por donantes (DAF). Estas donaciones se procesan a través de The Giving Block. Si desea recibir una deducción de impuestos en los EE. UU. por el valor justo de mercado de su donación, puede proporcionar una dirección de correo electrónico para recibir un recibo de impuestos. The Giving Block también admite donaciones anónimas de criptomonedas y de DAF. Nota: Solo recibirás una insignia en tu cuenta de Smessenger si realizas una donación dentro de la aplicación Smessenger.",
+
+    "DONATE_FIRSTSECTION1": "Donar a Smessenger",
+    "DONATE_FIRSTSECTION2": "Smessenger está diseñado para usted; no tus datos y sin fines de lucro. Perseguimos nuestra misión con su apoyo: proteger la libertad de expresión y permitir una comunicación global segura a través de tecnología de privacidad de código abierto. Mensajería privada. Sin anuncios, sin rastreadores, sin vigilancia. Sus donaciones ayudan a pagar el desarrollo y mantenimiento de Smessenger, incluidos los servidores y el ancho de banda necesarios para que Smessenger esté disponible para millones de personas en todo el mundo que dependen de él. Si proporciona un correo electrónico con su donación, recibirá una confirmación por correo electrónico de sus registros de impuestos. Smessenger Technology Foundation es una organización benéfica independiente sin fines de lucro y está exenta de impuestos según la sección 501c3 del Código de Rentas Internas de EE. UU. Nuestro número de identificación fiscal federal es 82-4506840. Nota: solo recibirá una insignia en su cuenta de Smessenger si realiza una donación dentro de la aplicación Smessenger.",
+    "DONATE_FIRSTSECTION3": "Otras formas de donar Smessenger acepta donaciones de criptomonedas, acciones y obsequios de fondos asesorados por donantes (DAF). Estas donaciones se procesan a través de The Giving Block. Si desea recibir una deducción de impuestos en los EE. UU. por el valor justo de mercado de su donación, puede proporcionar una dirección de correo electrónico para recibir un recibo de impuestos. The Giving Block también admite donaciones anónimas de criptomonedas y de DAF. Nota: Solo recibirás una insignia en tu cuenta de Smessenger si realizas una donación dentro de la aplicación Smessenger."
+   
 }

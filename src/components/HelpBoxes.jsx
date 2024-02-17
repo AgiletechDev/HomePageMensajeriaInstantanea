@@ -1,7 +1,10 @@
 import { Box, Typography, useTheme } from '@mui/material'
+import { useTranslation } from 'react-i18next'
 
 const HelpBoxes = () => {
   const theme = useTheme();
+  const { t } = useTranslation();
+
   return (
     <Box
     sx={{
@@ -34,15 +37,14 @@ const HelpBoxes = () => {
           textAlign="center"
           color={theme.palette.textLight.main}
         >
-          Empezando
+          {t("HELP_USERS3")}
         </Typography>
         <Typography
           variant="p"
           textAlign="center"
           color={theme.palette.textLight.main}
         >
-          Comprende los conceptos básicos de Smessenger en Android, iOS y
-          Desktop
+          {t("HELP_USERS4")}
         </Typography>
       </Box>
       <Box
@@ -62,14 +64,14 @@ const HelpBoxes = () => {
           textAlign="center"
           color={theme.palette.textLight.main}
         >
-          Características
+          {t("HELP_USERS5")}
         </Typography>
         <Typography
           variant="p"
           textAlign="center"
           color={theme.palette.textLight.main}
         >
-          Explora todas las características de la mensajería privada
+          {t("HELP_USERS6")}
         </Typography>
       </Box>
       <Box
@@ -89,15 +91,14 @@ const HelpBoxes = () => {
           textAlign="center"
           color={theme.palette.textLight.main}
         >
-          Seguridad
+          {t("HELP_USERS7")}
         </Typography>
         <Typography
           variant="body"
           textAlign="center"
           color={theme.palette.textLight.main}
         >
-          Esta sección contiene preguntas habituales sobre la seguridad y
-          fiabilidad de la tecnología en las aplicaciones
+          {t("HELP_USERS8")}
         </Typography>
       </Box>
     </Box>
@@ -116,7 +117,7 @@ const HelpBoxes = () => {
           textAlign="center"
           color={theme.palette.textLight.main}
         >
-          Solución de problemas
+          {t("HELP_USERS9")}
         </Typography>
       </Box>
       <Box
@@ -133,7 +134,7 @@ const HelpBoxes = () => {
           textAlign="center"
           color={theme.palette.textLight.main}
         >
-          General
+          {t("HELP_USERS10")}
         </Typography>
       </Box>
     </Box>

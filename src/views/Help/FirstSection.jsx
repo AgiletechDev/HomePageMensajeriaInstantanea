@@ -11,9 +11,11 @@ import SearchIcon from "@mui/icons-material/Search";
 import HelpBoxes from "../../components/HelpBoxes";
 import img1 from "../../assets/images/pag7/recurso 1.png";
 import img2 from "../../assets/images/pag7/recurso 2.png";
+import { useTranslation } from 'react-i18next'
 
 const FirstSection = () => {
   const theme = useTheme();
+  const { t } = useTranslation();
 
   return (
     <Box
@@ -41,7 +43,7 @@ const FirstSection = () => {
           color={theme.palette.textLight.main}
           fontWeight="bold"
         >
-          ¿Cómo podemos ayudarte?
+          {t("HELP_USERS1")}
         </Typography>
 
         <Box
@@ -61,7 +63,7 @@ const FirstSection = () => {
             <SearchIcon />
           </IconButton>
           <Input
-            placeholder="Buscar"
+            placeholder={t("HELP_USERS2")}
             fullWidth
             disableUnderline
             sx={{
@@ -103,7 +105,7 @@ const FirstSection = () => {
             fontWeight="bold"
             textAlign="center"
           >
-            Enviar una solicitud
+            {t("HELP_USERS11")}
           </Typography>
           <Box
             sx={{
@@ -118,7 +120,7 @@ const FirstSection = () => {
             }}
           >
             <Input
-              placeholder="Correo Eléctronico *"
+              placeholder={t("HELP_USERS12")}
               fullWidth
               disableUnderline
               sx={{
@@ -141,7 +143,7 @@ const FirstSection = () => {
             }}
           >
             <Input
-              placeholder="Vuelve a introducir tu dirección de correo electrónico *"
+              placeholder={t("HELP_USERS13")}
               fullWidth
               disableUnderline
               sx={{
@@ -164,7 +166,7 @@ const FirstSection = () => {
             }}
           >
             <Input
-              placeholder="¿Cuál es tu consulta? *"
+              placeholder={t("HELP_USERS14")}
               fullWidth
               disableUnderline
               sx={{
@@ -187,7 +189,7 @@ const FirstSection = () => {
             }}
           >
             <Input
-              placeholder="¿Para qué plataforma es? *"
+              placeholder={t("HELP_USERS15")}
               fullWidth
               disableUnderline
               sx={{
@@ -211,7 +213,7 @@ const FirstSection = () => {
           >
             <TextareaAutosize
               minRows={5}
-              placeholder="Descripción"
+              placeholder={t("HELP_USERS16")}
               style={{
                 width: "100%",
                 border: "none",
@@ -233,7 +235,7 @@ const FirstSection = () => {
               color:theme.palette.textLight.main,
             }}
           >
-            Enviar
+            {t("HELP_USERS17")}
           </Button>
         </Box>
       </Box>
