@@ -54,13 +54,13 @@ export const Footer = () => {
                 sx={{ color: theme.palette.textLight.main }}
                 fontWeight="bold"
               >
-                © 2023-2024 Smessenger.
+                © 2024 Chasky talk.
                 <br />
-                Smessenger is a registered trademark in the United States and
+                Chasky talk is a registered trademark in the United States and
                 other countries.
                 <br />
                 <br />
-                For media inquiries, contact press@Smessenger.org
+                For media inquiries, contact press@Chaskytalk.org
               </Typography>
             </Link>
           </Box>

@@ -61,7 +61,7 @@ export const FirstSection = () => {
             src={phone3}
             alt=""
             style={{
-              width: "40%",
+              width: "34%",
               position: "absolute",
               right: "10%",
               zIndex: "1",
@@ -105,6 +105,7 @@ export const FirstSection = () => {
 
           <Button
             variant="contained"
+            
             sx={{
               width: "200px",
               fontSize: "15px",
